@@ -12,6 +12,8 @@ using namespace std;
 int main(){
 	int x_axis, y_axis, temp;
 	bool escape;
+	bool alwaystrue = true;
+	string map;
 	// ----------------------Map Axis Getter + set all to empty-----------------------------------
 	cout << "Enter x-axis: " ;
 	cin >> x_axis;
@@ -44,27 +46,36 @@ int main(){
 	}
 	//-------------------end of Finding the robots -----------------------------
 	//----------------------------Game Loop----------------------------------------------
-	for (int some=  0;some < 300;some++){
+	while (alwaystrue){
 		//----------------------------map generator/shower-----------------------------------------
-		if (system("CLS")) system("clear");
-		cout << "+" ;
+		system("CLS");
+		map += "+" ;
 		for (int z= 0;z < x_axis;z++){
-			cout << "---+" ;
+			map+= "---+" ;
 		}	
-		cout << endl; 	
-		for (int y= 0; y<y_axis; y++){
+		map += " \n";
+		for (int y= 0; y < y_axis; y++){
 			for (int x= 0; x<x_axis; x++){
 				if (x == targetx && y == targety){
-					cout << "|[" << array[x][y] <<"]";
-				} else
-				cout << "| " << array[x][y] <<" ";
+					map += "|[" ;
+					map += array[x][y];
+					map +="]";
+				} else{
+					map += "| " ;
+					map += array[x][y] ;
+					map +=" ";
+				}
 			}
-			cout << "|" <<endl;
+			map += "|";
+			map += " \n";
 			for (int x= 0; x<x_axis; x++){
-				cout << "+---";
+				map+= "+---";
 			}		
-			cout << "+" << endl;
+			map += "+";
+			map += " \n";
 		}
+		cout << map << endl;
+		map = "";
 		cout << "Targets: "<< targetx << " " << targety <<endl;
 		//--------------------------end of the map generator/shower-------------------------------------
 		//------------------------Input getter (doesn't need Enter)----------------------------------------
