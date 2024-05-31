@@ -1,6 +1,7 @@
 #include <conio.h>
 #include <iostream>
 #include <string>
+#include <map>
 #ifdef __cplusplus__
   #include <cstdlib>
 #else
@@ -9,15 +10,19 @@
 
 using namespace std;
 
+auto set_random_coordinate(int x_axis, int y_axis, int elem_pos){ //Shouldn't be that hard to understand? the map thing is a map thing for better data management
+	
+} 
+
 int main(){
 	int x_axis, y_axis, temp;
 	bool escape;
 	bool alwaystrue = true;
 	string map;
-	// ----------------------Map Axis Getter + set all to empty-----------------------------------
-	cout << "Enter x-axis: " ;
+	// ----------------------Map Axis Getter + set all array to empty-----------------------------------
+	cout << "Enter x-axis (suggest >5 and <20): " ;
 	cin >> x_axis;
-	cout << "Enter y-axis: "; 
+	cout << "Enter y-axis (suggest >5 and <12): "; 
 	cin >> y_axis;
 	char array[x_axis][y_axis] = {};
 	for (int x=  0;x < x_axis;x++){
@@ -25,14 +30,25 @@ int main(){
 			array[x][y] = ' ';
 		}
 	}
+	//----------------------Objects Selector--------------------------------
+	cout << "Initializing map..." << endl;
+	cout << "You have selected a " <<x_axis<<" x " << y_axis <<" map" <<endl;
+	cout << "Select 
+	char elem_list[elem_count+2] = {}; 
+	int elem_pos[elem_count+2][2] = {}
+	//Example:{'R','X','X',' ','X','X',' '} means you have 1 R and 2 X while opponent has 2 X, we can see its yours or opp's according to the empty char
+	//Example:{'R',' ','X','X',' ','T','T'} means you have 1 R, opponent has 2 X's while there's 2 obstacle T's 
 	//---------------------- end of Map Axis Getter + set all to empty-----------------------------------
 	//------------------------Random robot placing-------------------------------------
-	int robotR_x_axis, robotR_y_axis;
+/*	int robotR_x_axis, robotR_y_axis;
 	robotR_x_axis = rand()%x_axis;
 	robotR_y_axis = rand()%y_axis;
 	array[robotR_x_axis][robotR_y_axis] = 'R';
 	cout << "Robot R is generated at " << robotR_x_axis << " " << robotR_y_axis <<endl << "--Press Enter to continue!--";
-	getch();
+	getch(); */
+	for (int index; index < temp; index++){
+		set_random_coordinate(int x_axis, int y_axis, map<string, int> elem_pos);
+	}
 	//------------------------end of Random robot placing-------------------------------------
 	//-------------------Finding the robots ( currently only R )-----------------------------
 	int targetx, targety;
