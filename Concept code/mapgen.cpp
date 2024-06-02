@@ -14,10 +14,45 @@ auto set_random_coordinate(int x_axis, int y_axis, int elem_pos){ //Shouldn't be
 	
 } 
 
+
+template <typename T1, typename T2> 
+class mapper {
+	private: 
+	T1* arrayAptr;
+	T2* arrayBptr;
+	int Arraysize;
+	public:
+	mapper(){};
+	mapper(T1* arrayA,T2* arrayB, int size){
+		arrayAptr = arrayA;
+		arrayBptr = arrayB;
+		Arraysize = size;
+	}
+	T2 get(T1 x){
+		for (int i = 0; i < Arraysize; i++){
+			if (arrayAptr[i] == x){
+				return arrayBptr[i];
+			}
+		}
+		throw std::logic_error(string("Array B Key not found")) ;
+	}
+	T1 get(T2 x){
+		for (int i = 0; i < Arraysize; i++){
+			if (arrayBptr[i] == x){
+				return arrayAptr[i];
+			}
+		}
+		throw std::logic_error(string("Array A Key not found")) ;
+	}
+};
+
 int main(){
 	int x_axis, y_axis, temp;
 	bool escape;
-	bool alwaystrue = true;
+	int max_robot_limit
+	string starting_robot_type[4] = ["Robocop","Terminator","BlueThunder","Madbot"]; //evolved robo type dont think need to use
+	string robot_symbol[4] = ["R","T","B","M"];
+	mapper starting_robot_symbols(starting_robot_type,robot_symbol);
 	string map;
 	// ----------------------Map Axis Getter + set all array to empty-----------------------------------
 	cout << "Enter x-axis (suggest >5 and <20): " ;
@@ -30,14 +65,37 @@ int main(){
 			array[x][y] = ' ';
 		}
 	}
+	int max_robot_limit = (x_axis*y_axis)/9;
+	if (max_robot_limit == 0){
+		max_robot_limit = 1;
+	}
+	char elem_list[max_robot_limit] = {};
 	//----------------------Objects Selector--------------------------------
 	cout << "Initializing map..." << endl;
 	cout << "You have selected a " <<x_axis<<" x " << y_axis <<" map" <<endl;
-	cout << "Select 
-	char elem_list[elem_count+2] = {}; 
-	int elem_pos[elem_count+2][2] = {}
-	//Example:{'R','X','X',' ','X','X',' '} means you have 1 R and 2 X while opponent has 2 X, we can see its yours or opp's according to the empty char
-	//Example:{'R',' ','X','X',' ','T','T'} means you have 1 R, opponent has 2 X's while there's 2 obstacle T's 
+	cout << "Select troops to march on an epic battle! Due to your battlefield size, you are limited to " << max_robot_limit <<" robots." << endl;
+	int total_robot_count, this_robot_count;
+	for (int i = 0, i < 4, i++){ 
+		cout << "How many " << starting_robot_type[i] << "?" << endl;
+		cin >> this_robot_count;
+        total_robot_count += this_robot_count;
+		if (total_robot_count > max_robot_limit){
+			cout << "Too Much Robots!" << endl;
+			continue; 
+		}
+		for (int k = 0; k < this_robot_count; k++){
+			for (int j=0;j < max_robot_limit;j++){
+				if (elem_list[j] = ""){
+					elem_list[j] = starting_robot_symbols.get(starting_robot_type[i])
+					
+				}
+				
+			}
+		}
+	}
+	// make a list of all robots + a for loop so you dont need to write all every line
+	//Example:{'R','X','X','X','X',' '} means battle field has 1 R and 4 X , we can see there's no obstacles since there's nothing after ' '
+	//Example:{'R','X','X',' ','T','T'} means battlefield have 1 R and 2 X's while there's 2 obstacle T's 
 	//---------------------- end of Map Axis Getter + set all to empty-----------------------------------
 	//------------------------Random robot placing-------------------------------------
 /*	int robotR_x_axis, robotR_y_axis;
@@ -62,7 +120,7 @@ int main(){
 	}
 	//-------------------end of Finding the robots -----------------------------
 	//----------------------------Game Loop----------------------------------------------
-	while (alwaystrue){
+	while (1){
 		//----------------------------map generator/shower-----------------------------------------
 		system("CLS");
 		map += "+" ;
