@@ -95,6 +95,7 @@ class battlefield {
 				mapstring += " \n";
 			}
 			cout << mapstring << endl;
+			mapstring = "";
 		}
 			
 };
