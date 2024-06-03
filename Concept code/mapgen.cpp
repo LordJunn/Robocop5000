@@ -139,9 +139,9 @@ int main(){
 	mapper starting_robot_symbols = mapper(starting_robot_type,robot_symbol,4);
 	string map;
 	// ----------------------Map Axis Getter + set all array to empty-----------------------------------
-	cout << "Enter x-axis (suggest >5 and <20): " ;
+	cout << "Enter x-axis (suggest >5 and <30): " ;
 	cin >> x_axis;
-	cout << "Enter y-axis (suggest >5 and <12): "; 
+	cout << "Enter y-axis (suggest >5 and <13): "; 
 	cin >> y_axis;
 	char array[x_axis][y_axis] = {};
 	for (int x=  0;x < x_axis;x++){
@@ -193,62 +193,10 @@ int main(){
 	battlefield game = battlefield(x_axis,y_axis);
 	game.randomize(elem_list,count);
 	game.setup();
-	game.printmap();
-	/*while (1){
-		//----------------------------map generator/shower-----------------------------------------
-		system("CLS");
-		map += "+" ;
-		for (int z= 0;z < x_axis;z++){
-			map+= "---+" ;
-		}	
-		map += " \n";
-		for (int y= 0; y < y_axis; y++){
-			for (int x= 0; x<x_axis; x++){
-				if (x == targetx && y == targety){
-					map += "|[" ;
-					map += array[x][y];
-					map +="]";
-				} else{
-					map += "| " ;
-					map += array[x][y] ;
-					map +=" ";
-				}
-			}
-			map += "|";
-			map += " \n";
-			for (int x= 0; x<x_axis; x++){
-				map+= "+---";
-			}		
-			map += "+";
-			map += " \n";
-		}
-		cout << map << endl;
-		map = "";
-		cout << "Targets: "<< targetx << " " << targety <<endl;*/
-		//--------------------------end of the map generator/shower-------------------------------------
-		//------------------------Input getter (doesn't need Enter)----------------------------------------
-		/*getch(); //This is because getch() will always send two "Stuff" at the time, and the first stuff is always useless (for arrow keys n delete)
-		switch(getch()) { // the real value
-			case 72: //left arrow key
-				targety -= 1;
-				break;
-			case 80: //down '' '' 
-				targety += 1;
-				break;
-			case 77: //right '' '' 
-				targetx += 1;
-				break;
-			case 75: //left '' '' 
-				targetx -= 1;
-				break;
-			case 83: //Delete to make sure one can exit the game loop
-				escape = true;
-				break;
-		}
-		if (escape == true){
-			break;
-		}
-		//-----------------------------end of input getter-----------------------------------------------------------
-	}*/
+	while(1){
+		system("cls");
+		game.printmap();
+		getch();
+	}
 	
 }
