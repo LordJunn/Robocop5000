@@ -14,8 +14,9 @@ auto set_random_coordinate(int x_axis, int y_axis, int elem_pos){ //Shouldn't be
 
 class battlefield {
 	private:
-		char* elem_list;
-		int** coordinates; //coordinates is a 2d [x][2] array
+		char* elem_list; //exmp: {'R','T'}
+		int** coordinates; //exmp:{{2,6},{1,5}}
+		
 		int elem_list_size;
 		int x_axis;
 		int y_axis;
@@ -177,9 +178,6 @@ int main(){
 					break;
 				}
 			}
-		}
-		for (char each:elem_list){
-			cout << each << endl;
 		}
 	}
 	// Count array length without '' empty char
