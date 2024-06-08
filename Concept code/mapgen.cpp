@@ -36,27 +36,27 @@ class battlefield {
 				coordinates[i] = new int[2];
 			}
 			this->elem_list = elem_list;
-			for (int x = 0;x < elem_list_size;x++){
-				int temp1,temp2;
-				temp1 = rand()%x_axis;
-				temp2 = rand()%y_axis;
-				while (run){
-					run = 0;
-					for (int y = 0;y < elem_list_size;y++){
-						if (temp1 == coordinates[y][0] and temp2 == coordinates[y][1]){
-							temp1 = rand()%x_axis;
-							temp2 = rand()%y_axis;
-						} 
+			for (int i = 0; i < elem_list_size; ++i) {
+				int temp1, temp2;
+				bool unique;
+				do {
+					unique = true; //assuming every coord is unique at the start
+					temp1 = rand() % x_axis;
+					temp2 = rand() % y_axis;
+
+					// Check if the generated coordinates are already in use
+					for (int j = 0; j < i; ++j) {
+						if (coordinates[j][0] == temp1 && coordinates[j][1] == temp2) {
+							unique = false;
+							break; 
+							//breaks from this loop to prevent redundant checking
+						}
 					}
-					for (int y = 0;y < elem_list_size;y++){
-						if (temp1 == coordinates[y][0] and temp2 == coordinates[y][1]){
-							run = 1;
-						} 
-					}
-				}
-				coordinates[x][0] = temp1;
-				coordinates[x][1] = temp2;
-			}				
+				} while (!unique);
+
+				coordinates[i][0] = temp1;
+				coordinates[i][1] = temp2;
+			}			
 		}
 		
 		void setup(){
@@ -70,9 +70,40 @@ class battlefield {
 				}
 			}
 			for (int x = 0; x < elem_list_size;x++){
-				map[coordinates[x][0]][coordinates[x][1]] = elem_list[x]; 
+				cout << y_axis-(coordinates[x][1]-1) <<endl;
+				cout << coordinates[x][0]<< endl;
+				cout << "This" << x_axis-(coordinates[x][0])-2 << endl;
+				map[coordinates[x][0]][(y_axis-1)-coordinates[x][1]] = elem_list[x]; 
 			}  
 		}
+		
+		void refresh(){
+			for (int x= 0;x < x_axis;x++){
+				for (int y= 0; y < y_axis; y++){
+					map[x][y] = ' ';
+				}
+			}
+			for (int x = 0; x < elem_list_size;x++){
+				map[coordinates[x][0]][(y_axis-1)-coordinates[x][1]] = elem_list[x];  
+			}  
+		}
+		
+		void changecoords(int x, int* y){
+			coordinates[x][0] = y[0];
+			coordinates[x][1] = y[1];
+			refresh();
+		}
+		
+		void printcoords(int x){
+			cout << "Element "<< elem_list[x] << " is at {" << coordinates[x][0] << "," << coordinates[x][1] << "}" << endl;
+		}
+		
+		void listallelem(){
+			for (int x = 0; x < elem_list_size; x++){
+				cout << "Element "<< elem_list[x] << " is at {" << coordinates[x][0] << "," << coordinates[x][1] << "}" << endl;
+			}
+		}
+		
 		
 		void printmap(){
 			mapstring += "+" ;
@@ -189,13 +220,32 @@ int main(){
 	}
 	
 	//----------------------------Game Loop----------------------------------------------
+
+	int coords[2]; int gc = 0; int buttonpressed = 0;
 	battlefield game = battlefield(x_axis,y_axis);
 	game.randomize(elem_list,count);
 	game.setup();
 	while(1){
+		gc++;
 		system("cls");
+		if (gc == 1){ //testing stuffs
+			coords[0] = 0;
+			coords[1] = 0;
+			game.changecoords(0,coords);
+		}
+		if (gc == 3){
+			coords[0] = 3;
+			coords[1] = 4;
+			game.changecoords(1,coords);
+		}
 		game.printmap();
-		getch();
-	}
-	
+		game.listallelem();
+		cout << "Turn " << gc;
+		int buttonpressed = getch();
+		if (buttonpressed == 0 || buttonpressed == 224)	{
+			getch();
+		}else if (buttonpressed == 27){
+			break;
+		}
+	}	
 }
