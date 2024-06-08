@@ -231,8 +231,8 @@ int main(){
 	int x_axis, y_axis, temp,count;
 	bool escape;
 	int max_robot_limit;
-	string starting_robot_type[4] = {"Robocop","Terminator","BlueThunder","Madbot"}; //evolved robo type dont think need to use
-	char robot_symbol[4] = {'R','T','B','M'};
+	string starting_robot_type[4] = {"Robocop","Terminator","BlueThunder"}; //evolved robo type dont think need to use
+	char robot_symbol[4] = {'R','T','B'};
 	mapper starting_robot_symbols = mapper(starting_robot_type,robot_symbol,3);
 	string map;
 	// ----------------------Map Axis Getter + set all array to empty-----------------------------------
