@@ -5,14 +5,15 @@
 #include <cstdlib>
 #include <stdlib.h>
 
-
+// NOTE: Remove MadBot from the starting robots, might need to reimplement a new way to do changecoords
 using namespace std;
 
-auto set_random_coordinate(int x_axis, int y_axis, int elem_pos){ //Shouldn't be that hard to understand? the map thing is a map thing for better data management
-	
+// Placeholder function for setting random coordinates
+auto set_random_coordinate(int x_axis, int y_axis, int elem_pos){ 
+
 } 
 
-class battlefield {
+class battlefield { 
 	private:
 		char* elem_list; //exmp: {'R','T'}
 		int** coordinates; //exmp:{{2,6},{1,5}}
@@ -28,7 +29,9 @@ class battlefield {
 			this->x_axis = x_axis;
 			this->y_axis = y_axis;
 		}
-		void randomize(char* elem_list, int elem_list_size){
+
+		// Randomly places elements on the battlefield, ensuring no duplicate coordinates
+		void randomize(char* elem_list, int elem_list_size){// - 
 			bool run = 1;
 			this->elem_list_size = elem_list_size;
 			coordinates = new int*[elem_list_size];
@@ -59,6 +62,7 @@ class battlefield {
 			}			
 		}
 		
+		// Initializes the battlefield map
 		void setup(){
 			map = new char*[x_axis];
 			for (int x = 0;x < x_axis;x++){
@@ -77,6 +81,7 @@ class battlefield {
 			}  
 		}
 		
+		// Clears the map and refreshes the elements
 		void refresh(){
 			for (int x= 0;x < x_axis;x++){
 				for (int y= 0; y < y_axis; y++){
@@ -88,23 +93,26 @@ class battlefield {
 			}  
 		}
 		
+		// Changes the coordinates of an element and refreshes the map
 		void changecoords(int x, int* y){
 			coordinates[x][0] = y[0];
 			coordinates[x][1] = y[1];
 			refresh();
 		}
 		
+		// Prints the coordinates of a specific element
 		void printcoords(int x){
 			cout << "Element "<< elem_list[x] << " is at {" << coordinates[x][0] << "," << coordinates[x][1] << "}" << endl;
 		}
 		
+		// Prints the coordinates of all elements
 		void listallelem(){
 			for (int x = 0; x < elem_list_size; x++){
 				cout << "Element "<< elem_list[x] << " is at {" << coordinates[x][0] << "," << coordinates[x][1] << "}" << endl;
 			}
 		}
 		
-		
+		// Prints the battlefield map
 		void printmap(){
 			mapstring += "+" ;
 			for (int x= 0;x < x_axis;x++){
@@ -163,13 +171,69 @@ class mapper {
 		}
 };
 
+// Here starts robot
+class Robot {
+private:
+	battlefield* gameMap;
+    string name;
+    char symbol;
+    int x, y;
+	int lives = 3;
+	int kills = 0;
+public:
+    Robot(string robotName, char robotSymbol) {
+        name = robotName;
+        symbol = robotSymbol;
+    }
+    string getName() const {
+        return name;
+    }
+	char getSymbol() const {
+        return symbol;
+    }
+    int getx() const {
+    return x;
+	}
+	int gety() const {
+    return y;
+    }
+	int getLives() const {
+        return lives;
+    }
+	void changecoords(){
+		//idk how to change coordinates
+	}
+};
+
+class RobotMove : public Robot{
+	public:
+};
+class RobotLook : public Robot{
+	public:
+};
+class RobotStomp : public Robot{
+	public:
+};
+class RobotShoot : public Robot{
+	public:
+};
+class Robocop : public Robot, RobotLook, RobotMove, RobotShoot{
+	public:
+};
+class Terminator : public Robot, RobotLook, RobotMove, RobotStomp {
+    public:
+};
+class BlueThunder : public Robot, RobotShoot{
+    public:
+};
+
 int main(){
 	int x_axis, y_axis, temp,count;
 	bool escape;
 	int max_robot_limit;
 	string starting_robot_type[4] = {"Robocop","Terminator","BlueThunder","Madbot"}; //evolved robo type dont think need to use
 	char robot_symbol[4] = {'R','T','B','M'};
-	mapper starting_robot_symbols = mapper(starting_robot_type,robot_symbol,4);
+	mapper starting_robot_symbols = mapper(starting_robot_type,robot_symbol,3);
 	string map;
 	// ----------------------Map Axis Getter + set all array to empty-----------------------------------
 	cout << "Enter x-axis (suggest >5 and <30): " ;
