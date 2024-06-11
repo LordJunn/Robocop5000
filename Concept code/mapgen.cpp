@@ -224,6 +224,14 @@ public:
         cout << mapstring << endl;
         mapstring = "";
     }
+    int getX(int index)
+    {
+        return coordinates[index][0];
+    }
+    int getY(int index)
+    {
+        return coordinates[index][1];
+    }
 };
 
 template <typename T1, typename T2>
@@ -347,7 +355,7 @@ public:
 class Robocop : public Robot
 {
 public:
-    Robocop(battlefield *gameMap, string robotName, char robotSymbol)
+    Robocop(battlefield *gameMap, string robotName, char robotSymbol, int x, int y)
     {
         name = robotName;
         symbol = robotSymbol;
@@ -356,7 +364,7 @@ public:
 class Terminator : public Robot
 {
 public:
-    Terminator(battlefield *gameMap, string robotName, char robotSymbol)
+    Terminator(battlefield *gameMap, string robotName, char robotSymbol, int x, int y)
     {
         name = robotName;
         symbol = robotSymbol;
@@ -365,7 +373,7 @@ public:
 class BlueThunder : public Robot
 {
 public:
-    BlueThunder(battlefield *gameMap, string robotName, char robotSymbol)
+    BlueThunder(battlefield *gameMap, string robotName, char robotSymbol, int x, int y)
     {
         name = robotName;
         symbol = robotSymbol;
@@ -479,17 +487,18 @@ int main()
     {
         if (elem_list[i] == 'R')
         {
-            robot_list[i] = Robocop(&game, "Robocop", 'R');
+            robot_list[i] = Robocop(&game, "Robocop", 'R', game.getX(i), game.getY(i));
         }
         else if (elem_list[i] == 'T')
         {
-            robot_list[i] = Terminator(&game, "Terminator", 'T');
+            robot_list[i] = Terminator(&game, "Terminator", 'T', game.getX(i), game.getY(i));
         }
         else if (elem_list[i] == 'B')
         {
-            robot_list[i] = BlueThunder(&game, "BlueThunder", 'B');
+            robot_list[i] = BlueThunder(&game, "BlueThunder", 'B', game.getX(i), game.getY(i));
         }
     }
+    cout << "Finished instantiating robots!\n";
     while (1)
     {
         gc++;
