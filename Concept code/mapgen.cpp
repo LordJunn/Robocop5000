@@ -4,312 +4,512 @@
 #include <map>
 #include <cstdlib>
 #include <stdlib.h>
+#include <time.h> 
 
-// NOTE: Remove MadBot from the starting robots, might need to reimplement a new way to do changecoords
+// NOTE: Need to make a getCoords in the game loop thing so that we can instantiate robots with the coordinates.
 using namespace std;
 
-// Placeholder function for setting random coordinates
-auto set_random_coordinate(int x_axis, int y_axis, int elem_pos){ 
+class battlefield
+{
+private:
+    char *elem_list;    // List of all types of robots
+    int **coordinates;  // List of all robot's coordinates
+    int elem_list_size; // Size of elem_list
+    int x_axis;         // Width of map
+    int y_axis;         // Height of map
+    char **map;         // 2D array of the map
 
-} 
+    string logs;      // Logs
+    string mapstring; // used to print the map
 
-class battlefield { 
-	private:
-		char* elem_list; //exmp: {'R','T'}
-		int** coordinates; //exmp:{{2,6},{1,5}}
-		
-		int elem_list_size;
-		int x_axis;
-		int y_axis;
-		char** map;
-		string mapstring;
-	public:
-		battlefield(){};
-		battlefield(int x_axis,int y_axis){
-			this->x_axis = x_axis;
-			this->y_axis = y_axis;
-		}
+public:
+    battlefield() {} // Default constructor
 
-		// Randomly places elements on the battlefield, ensuring no duplicate coordinates
-		void randomize(char* elem_list, int elem_list_size){// - 
-			bool run = 1;
-			this->elem_list_size = elem_list_size;
-			coordinates = new int*[elem_list_size];
-			for (int i = 0; i < elem_list_size; ++i) {
-				coordinates[i] = new int[2];
-			}
-			this->elem_list = elem_list;
-			for (int i = 0; i < elem_list_size; ++i) {
-				int temp1, temp2;
-				bool unique;
-				do {
-					unique = true; //assuming every coord is unique at the start
-					temp1 = rand() % x_axis;
-					temp2 = rand() % y_axis;
+    battlefield(int x_axis, int y_axis, int elem_list_size)
+    {
+        // Set x_axis n y_axis
+        this->x_axis = x_axis;
+        this->y_axis = y_axis;
 
-					// Check if the generated coordinates are already in use
-					for (int j = 0; j < i; ++j) {
-						if (coordinates[j][0] == temp1 && coordinates[j][1] == temp2) {
-							unique = false;
-							break; 
-							//breaks from this loop to prevent redundant checking
-						}
-					}
-				} while (!unique);
+        // Allocate memory for the map
+        map = new char *[x_axis];
+        for (int i = 0; i < x_axis; ++i)
+        {
+            map[i] = new char[y_axis];
+        }
 
-				coordinates[i][0] = temp1;
-				coordinates[i][1] = temp2;
-			}			
-		}
-		
-		// Initializes the battlefield map
-		void setup(){
-			map = new char*[x_axis];
-			for (int x = 0;x < x_axis;x++){
-				map[x]= new char[2];
-			}
-			for (int x= 0;x < x_axis;x++){
-				for (int y= 0; y < y_axis; y++){
-					map[x][y] = ' ';
-				}
-			}
-			for (int x = 0; x < elem_list_size;x++){
-				cout << y_axis-(coordinates[x][1]-1) <<endl;
-				cout << coordinates[x][0]<< endl;
-				cout << "This" << x_axis-(coordinates[x][0])-2 << endl;
-				map[coordinates[x][0]][(y_axis-1)-coordinates[x][1]] = elem_list[x]; 
-			}  
-		}
-		
-		// Clears the map and refreshes the elements
-		void refresh(){
-			for (int x= 0;x < x_axis;x++){
-				for (int y= 0; y < y_axis; y++){
-					map[x][y] = ' ';
-				}
-			}
-			for (int x = 0; x < elem_list_size;x++){
-				map[coordinates[x][0]][(y_axis-1)-coordinates[x][1]] = elem_list[x];  
-			}  
-		}
-		
-		// Changes the coordinates of an element and refreshes the map
-		void changecoords(int x, int* y){
-			coordinates[x][0] = y[0];
-			coordinates[x][1] = y[1];
-			refresh();
-		}
-		
-		// Prints the coordinates of a specific element
-		void printcoords(int x){
-			cout << "Element "<< elem_list[x] << " is at {" << coordinates[x][0] << "," << coordinates[x][1] << "}" << endl;
-		}
-		
-		// Prints the coordinates of all elements
-		void listallelem(){
-			for (int x = 0; x < elem_list_size; x++){
-				cout << "Element "<< elem_list[x] << " is at {" << coordinates[x][0] << "," << coordinates[x][1] << "}" << endl;
-			}
-		}
-		
-		// Prints the battlefield map
-		void printmap(){
-			mapstring += "+" ;
-			for (int x= 0;x < x_axis;x++){
-				mapstring+= "---+" ;
-			}	
-			mapstring += " \n";
-			for (int y= 0; y < y_axis; y++){
-				for (int x= 0; x<x_axis; x++){
-					mapstring += "| " ;
-					mapstring += map[x][y] ;
-					mapstring +=" ";
-					
-				}
-				mapstring += "|";
-				mapstring += " \n";
-				for (int x= 0; x<x_axis; x++){
-					mapstring+= "+---";
-				}		
-				mapstring += "+";
-				mapstring += " \n";
-			}
-			cout << mapstring << endl;
-			mapstring = "";
-		}
-			
+        //
+
+        // Initialize map with empty spaces
+        for (int i = 0; i < x_axis; ++i)
+        {
+            for (int j = 0; j < y_axis; ++j)
+            {
+                map[i][j] = ' ';
+            }
+        }
+
+        this->elem_list_size = elem_list_size;
+
+        coordinates = new int *[elem_list_size];
+        for (int i = 0; i < elem_list_size; ++i)
+        {
+            coordinates[i] = new int[2];
+        }
+    }
+
+    ~battlefield()
+    {
+        // Deconstruct
+        for (int i = 0; i < x_axis; ++i)
+        {
+            delete[] map[i];
+        }
+        delete[] map;
+
+        for (int i = 0; i < elem_list_size; ++i)
+        {
+            delete[] coordinates[i];
+        }
+        delete[] coordinates;
+    }
+
+    // Randomly places elements on the battlefield, ensuring no duplicate coordinates
+    void randomize(char *elem_list)
+    {
+
+        this->elem_list = elem_list;
+
+        // Initialize random engine and distribution
+        srand(time(0));
+
+        for (int i = 0; i < elem_list_size; ++i)
+        {
+            int temp1, temp2;
+            bool unique;
+            do
+            {
+                unique = true; // Assuming every coord is unique at the start
+                temp1 = rand() % x_axis;
+                temp2 = rand() % y_axis;
+
+                // Check if the generated coordinates are already in use
+                for (int j = 0; j < i; ++j)
+                {
+                    if (coordinates[j][0] == temp1 && coordinates[j][1] == temp2)
+                    {
+                        unique = false;
+                        break;
+                    }
+                }
+            } while (!unique);
+
+            coordinates[i][0] = temp1;
+            coordinates[i][1] = temp2;
+        }
+    }
+
+    // Initializes the battlefield map
+    void setup()
+    {
+        // Clear the map
+        for (int i = 0; i < x_axis; ++i)
+        {
+            for (int j = 0; j < y_axis; ++j)
+            {
+                map[i][j] = ' ';
+            }
+        }
+
+        // Place elements on the map
+        for (int i = 0; i < elem_list_size; ++i)
+        {
+            int x = coordinates[i][0];
+            int y = y_axis - coordinates[i][1] - 1;
+            map[x][y] = elem_list[i];
+        }
+    }
+
+    // Clears the map and refreshes the elements
+    void refresh()
+    {
+        // Clear the map
+        for (int i = 0; i < x_axis; ++i)
+        {
+            for (int j = 0; j < y_axis; ++j)
+            {
+                map[i][j] = ' ';
+            }
+        }
+
+        // Place elements on the map
+        for (int i = 0; i < elem_list_size; ++i)
+        {
+            int x = coordinates[i][0];
+            int y = y_axis - coordinates[i][1] - 1;
+            map[x][y] = elem_list[i];
+        }
+    }
+
+    // Changes the coordinates of an element and refreshes the map (coords stored inside battlefield)
+    void changecoords(int index, int *new_coords)
+    {
+        coordinates[index][0] = new_coords[0];
+        coordinates[index][1] = new_coords[1];
+        refresh();
+    }
+
+    // Prints the coordinates of a specific element
+    void printcoords(int index)
+    {
+        cout << "Element " << elem_list[index] << " is at {" << coordinates[index][0] << ", " << coordinates[index][1] << "}" << endl;
+    }
+
+    bool checkoccupied(int x, int y)
+    {
+        if (map[x][y] != ' ')
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    // Prints the coordinates of all elements
+    void logallelem()
+    {
+        for (int i = 0; i < elem_list_size; i++)
+        {
+            logs += "Element ";
+            logs += elem_list[i];
+            logs += " is at {";
+            logs += to_string(coordinates[i][0]);
+            logs += ", ";
+            logs += to_string(coordinates[i][1]);
+            logs += "}\n";
+        }
+    }
+
+    void printlogs()
+    {
+        cout << logs;
+        logs = "";
+    }
+
+    // Prints the battlefield map
+    void printmap()
+    {
+        mapstring += "+";
+        for (int i = 0; i < x_axis; i++)
+        {
+            mapstring += "---+";
+        }
+        mapstring += "\n";
+        for (int i = 0; i < y_axis; i++)
+        {
+            for (int j = 0; j < x_axis; j++)
+            {
+                mapstring += "| ";
+                mapstring += map[j][i];
+                mapstring += " ";
+            }
+            mapstring += "|\n";
+            for (int j = 0; j < x_axis; j++)
+            {
+                mapstring += "+---";
+            }
+            mapstring += "+\n";
+        }
+        cout << mapstring << endl;
+        mapstring = "";
+    }
 };
-		
-template <typename T1, typename T2> 
-class mapper {
-	private: 
-		T1* arrayAptr;
-		T2* arrayBptr;
-		int Arraysize;
-	public:
-		mapper(){};
-		mapper(T1* arrayA,T2* arrayB, int size){
-			arrayAptr = arrayA;
-			arrayBptr = arrayB;
-			Arraysize = size;
-		}
-		T2 get(T1 x){
-			for (int i = 0; i < Arraysize; i++){
-				if (arrayAptr[i] == x){
-					return arrayBptr[i];
-				}
-			}
-			throw std::logic_error(string("Array B Key not found")) ;
-		}
-		T1 get(T2 x){
-			for (int i = 0; i < Arraysize; i++){
-				if (arrayBptr[i] == x){
-					return arrayAptr[i];
-				}
-			}
-			throw std::logic_error(string("Array A Key not found")) ;
-		}
+
+template <typename T1, typename T2>
+class mapper
+{
+private:
+    T1 *arrayAptr;
+    T2 *arrayBptr;
+    int Arraysize;
+
+public:
+    mapper(){};
+    mapper(T1 *arrayA, T2 *arrayB, int size)
+    {
+        arrayAptr = arrayA;
+        arrayBptr = arrayB;
+        Arraysize = size;
+    }
+    T2 get(T1 x)
+    {
+        for (int i = 0; i < Arraysize; i++)
+        {
+            if (arrayAptr[i] == x)
+            {
+                return arrayBptr[i];
+            }
+        }
+        throw std::logic_error(string("Array B Key not found"));
+    }
+    T1 get(T2 x)
+    {
+        for (int i = 0; i < Arraysize; i++)
+        {
+            if (arrayBptr[i] == x)
+            {
+                return arrayAptr[i];
+            }
+        }
+        throw std::logic_error(string("Array A Key not found"));
+    }
 };
 
 // Here starts robot
-class Robot {
-private:
-	battlefield* gameMap;
+class Robot
+{
+protected:
+    battlefield *gameMap;
     string name;
     char symbol;
-    int x, y;
-	int lives = 3;
-	int kills = 0;
+    int coords[1] = {};
+    int lives = 3;
+    int kills = 0;
+
 public:
-    Robot(string robotName, char robotSymbol) {
+    Robot() {}
+    Robot(battlefield *gameMap, string robotName, char robotSymbol)
+    {
         name = robotName;
         symbol = robotSymbol;
     }
-    string getName() const {
+    string getName() const
+    {
         return name;
     }
-	char getSymbol() const {
+    char getSymbol() const
+    {
         return symbol;
     }
-    int getx() const {
-    return x;
-	}
-	int gety() const {
-    return y;
+    int getx() const
+    {
+        return coords[0];
     }
-	int getLives() const {
+    int gety() const
+    {
+        return coords[1];
+    }
+    int getLives() const
+    {
         return lives;
     }
-	void changecoords(){
-		//idk how to change coordinates
-	}
+    void changecoords()
+    {
+        int newX = 0;
+        int newY = 0;
+        int moves = rand() % 8;
+        switch (moves)
+        {
+        case 0:
+            newY++;
+            break;
+        case 1:
+            newX--;
+            break;
+        case 2:
+            newY--;
+            break;
+        case 3:
+            newX++;
+            break;
+        case 4:
+            newX--;
+            newY++;
+            break;
+        case 5:
+            newX++;
+            newY++;
+            break;
+        case 6:
+            newX--;
+            newY--;
+            break;
+        case 7:
+            newX++;
+            newY--;
+            break;
+        }
+        int newcoords[] = {newX, newY};
+    }
 };
 
-class RobotMove : public Robot{
-	public:
+class Robocop : public Robot
+{
+public:
+    Robocop(battlefield *gameMap, string robotName, char robotSymbol)
+    {
+        name = robotName;
+        symbol = robotSymbol;
+    }
 };
-class RobotLook : public Robot{
-	public:
+class Terminator : public Robot
+{
+public:
+    Terminator(battlefield *gameMap, string robotName, char robotSymbol)
+    {
+        name = robotName;
+        symbol = robotSymbol;
+    }
 };
-class RobotStomp : public Robot{
-	public:
-};
-class RobotShoot : public Robot{
-	public:
-};
-class Robocop : public Robot, RobotLook, RobotMove, RobotShoot{
-	public:
-};
-class Terminator : public Robot, RobotLook, RobotMove, RobotStomp {
-    public:
-};
-class BlueThunder : public Robot, RobotShoot{
-    public:
+class BlueThunder : public Robot
+{
+public:
+    BlueThunder(battlefield *gameMap, string robotName, char robotSymbol)
+    {
+        name = robotName;
+        symbol = robotSymbol;
+    }
 };
 
-int main(){
-	int x_axis, y_axis, temp,count;
-	bool escape;
-	int max_robot_limit;
-	string starting_robot_type[3] = {"Robocop","Terminator","BlueThunder"}; //evolved robo type dont think need to use
-	char robot_symbol[3] = {'R','T','B'};
-	mapper starting_robot_symbols = mapper(starting_robot_type,robot_symbol,3);
-	string map;
-	// ----------------------Map Axis Getter + set all array to empty-----------------------------------
-	cout << "Enter x-axis (suggest >5 and <30): " ;
-	cin >> x_axis;
-	cout << "Enter y-axis (suggest >5 and <13): "; 
-	cin >> y_axis;
-	char array[x_axis][y_axis] = {};
-	for (int x=  0;x < x_axis;x++){
-		for (int y= 0; y< y_axis; y++){
-			array[x][y] = ' ';
-		}
-	}
-	max_robot_limit = (x_axis*y_axis)/9;
-	if (max_robot_limit == 0){
-		max_robot_limit = 1;
-	}
-	char elem_list[max_robot_limit] = {};
-	//----------------------Objects Selector--------------------------------
-	cout << "Initializing map..." << endl;
-	cout << "You have selected a " <<x_axis<<" x " << y_axis <<" map" <<endl;
-	cout << "Select troops to march on an epic battle! Due to your battlefield size, you are limited to " << max_robot_limit <<" robots." << endl;
-	int total_robot_count =0, this_robot_count = 0;
-	for (int i = 0; i < 4; i++){ 
-		cout << "How many " << starting_robot_type[i] << "?" << endl;
-		cin >> this_robot_count;
+int main()
+{
+    int x_axis, y_axis, temp, count;
+    bool escape;
+    int max_robot_limit;
+    string starting_robot_type[3] = {"Robocop", "Terminator", "BlueThunder"}; // used to know how many initial robots ya want
+    char starting_robot_symbol[3] = {'R', 'T', 'B'};
+    string all_robot_types[7] = {"Robocop", "Terminator", "BlueThunder", "TerminatorRoboCop", "MadBot", "Robotank", "UltimateRobot"};
+    char all_robot_symbol[7] = {'R', 'T', 'B', 'A', 'M', 'E', 'U'};
+    mapper starting_robot_symbols = mapper(starting_robot_type, starting_robot_symbol, 3);
+    string map;
+    // ----------------------Map Axis Getter + set all array to empty-----------------------------------
+    // get x_axis
+    do
+    {
+        cout << "Enter x-axis (>3 and <30): ";
+        cin >> x_axis;
+        if (x_axis <= 3 or x_axis >= 30)
+        {
+            cout << "invalid number!" << endl;
+        }
+    } while (x_axis <= 3 or x_axis >= 30);
+
+    // get y_axis
+    do
+    {
+        cout << "Enter y-axis (>3 and <13): ";
+        cin >> y_axis;
+        if (y_axis <= 3 or y_axis >= 13)
+        {
+            cout << "invalid number!" << endl;
+        }
+    } while (y_axis <= 3 or y_axis >= 13);
+
+    max_robot_limit = (x_axis * y_axis) / 9;
+    if (max_robot_limit == 0)
+    {
+        max_robot_limit = 1;
+    }
+    char elem_list[max_robot_limit] = {};
+
+    //----------------------Objects Selector--------------------------------
+    cout << "Initializing map..." << endl;
+    cout << "You have selected a " << x_axis << " x " << y_axis << " map" << endl;
+    cout << "Select troops to march on an epic battle! Due to your battlefield size, you are limited to " << max_robot_limit << " robots." << endl;
+    int total_robot_count = 0, this_robot_count = 0;
+    for (int i = 0; i < 3; i++)
+    {
+        cout << "How many " << starting_robot_type[i] << "?" << endl;
+        cin >> this_robot_count;
         total_robot_count += this_robot_count;
-		if (total_robot_count > max_robot_limit){
-			cout << "Too Much Robots!" << endl;
-			total_robot_count -= this_robot_count;			
-			i--; 
-			continue;
-		}
-		for (int k = 0; k < this_robot_count; k++){
-			for (int j=0;j < max_robot_limit;j++){
-				if (elem_list[j] == '\0'){
-					elem_list[j] = starting_robot_symbols.get(starting_robot_type[i]);
-					break;
-				}
-			}
-		}
-	}
-	// Count array length without '' empty char
-	count = 0;
-	for (char each:elem_list){
-		if (each != '\0'){
-			count+=1;
-		}
-	}
-	
-	//----------------------------Game Loop----------------------------------------------
+        if (total_robot_count > max_robot_limit)
+        {
+            cout << "Too Much Robots!" << endl;
+            total_robot_count -= this_robot_count;
+            i--;
+            continue;
+        }
+        for (int k = 0; k < this_robot_count; k++)
+        {
+            for (int j = 0; j < max_robot_limit; j++)
+            {
+                if (elem_list[j] == '\0')
+                {
+                    elem_list[j] = starting_robot_symbols.get(starting_robot_type[i]);
+                    break;
+                }
+            }
+        }
+        if (total_robot_count == max_robot_limit)
+        {
+            break;
+        }
+    }
+    // Count array length without '' empty char
+    count = 0;
+    for (char each : elem_list)
+    {
+        if (each != '\0')
+        {
+            count += 1;
+        }
+    }
 
-	int coords[2]; int gc = 0; int buttonpressed = 0;
-	battlefield game = battlefield(x_axis,y_axis);
-	game.randomize(elem_list,count);
-	game.setup();
-	while(1){
-		gc++;
-		system("cls");
-		if (gc == 1){ //testing stuffs
-			coords[0] = 0;
-			coords[1] = 0;
-			game.changecoords(0,coords);
-		}
-		if (gc == 3){
-			coords[0] = 3;
-			coords[1] = 4;
-			game.changecoords(1,coords);
-		}
-		game.printmap();
-		game.listallelem();
-		cout << "Turn " << gc;
-		int buttonpressed = getch();
-		if (buttonpressed == 0 || buttonpressed == 224)	{
-			getch();
-		}else if (buttonpressed == 27){
-			break;
-		}
-	}	
+    //----------------------------Game Loop----------------------------------------------
+
+    int coords[2];
+    int gc = 0;
+    int buttonpressed = 0;
+
+    // counting length of elem_list to initialize battlefield
+    count = 0; // Count for instantiating robots
+    for (char each : elem_list)
+    {
+        if (each != '\0')
+        {
+            count += 1;
+        }
+    }
+    battlefield game = battlefield(x_axis, y_axis, count);
+    game.randomize(elem_list);
+    game.setup();
+    Robot robot_list[count] = {}; // Array for instantiated robots
+    for (int i = 0; i < count; i++)
+    {
+        if (elem_list[i] == 'R')
+        {
+            robot_list[i] = Robocop(&game, "Robocop", 'R');
+        }
+        else if (elem_list[i] == 'T')
+        {
+            robot_list[i] = Terminator(&game, "Terminator", 'T');
+        }
+        else if (elem_list[i] == 'B')
+        {
+            robot_list[i] = BlueThunder(&game, "BlueThunder", 'B');
+        }
+    }
+    while (1)
+    {
+        gc++;
+        cout << endl
+             << endl;
+        cout << "--------------------------------------------------------------------------------------------" << endl;
+        cout << "Turn " << gc << endl
+             << endl;
+        game.printmap();
+        game.logallelem();
+        game.printlogs();
+        game.printcoords(4);
+        int buttonpressed = getch();
+        if (buttonpressed == 0 || buttonpressed == 224)
+        {
+            getch();
+        }
+        else if (buttonpressed == 27)
+        {
+            break;
+        }
+    }
 }
