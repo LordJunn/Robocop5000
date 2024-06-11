@@ -66,7 +66,7 @@ public:
     }
 
     // Randomly places elements on the battlefield, ensuring no duplicate coordinates
-    void randomize(char* elem_list, int elem_list_size) {
+    void randomize(char* elem_list) {
 	
         this->elem_list = elem_list;
 
