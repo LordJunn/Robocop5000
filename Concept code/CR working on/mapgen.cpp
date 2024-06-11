@@ -11,20 +11,20 @@ using namespace std;
 
 class battlefield {
 private:
-    char* elem_list; // Example: {'R', 'T'}
-    int** coordinates; // Example: {{2, 6}, {1, 5}}
-    int elem_list_size;
-    int x_axis;
-    int y_axis;
-    char** map;
+    char* elem_list; // List of all types of robots
+    int** coordinates; // List of all robot's coordinates
+    int elem_list_size; // Size of elem_list
+    int x_axis; // Width of map
+    int y_axis; // Height of map
+    char** map; // 2D array of the map
 
-    string logs;
-    string mapstring;
+    string logs; // Logs
+    string mapstring; // used to print the map
 
 public:
     battlefield() {}
 
-    battlefield(int x_axis, int y_axis) {
+    battlefield(int x_axis, int y_axis, int elem_list_size) {
         //Set x_axis n y_axis
 		this->x_axis = x_axis; 
         this->y_axis = y_axis;
@@ -35,11 +35,20 @@ public:
             map[i] = new char[y_axis];
         }
 
+        //
+
         // Initialize map with empty spaces
         for (int i = 0; i < x_axis; ++i) {
             for (int j = 0; j < y_axis; ++j) {
                 map[i][j] = ' ';
             }
+        }
+
+        this->elem_list_size = elem_list_size;
+		
+        coordinates = new int*[elem_list_size];
+        for (int i = 0; i < elem_list_size; ++i) {
+            coordinates[i] = new int[2];
         }
     }
 
@@ -58,15 +67,7 @@ public:
 
     // Randomly places elements on the battlefield, ensuring no duplicate coordinates
     void randomize(char* elem_list, int elem_list_size) {
-        this->elem_list_size = elem_list_size;
-		
-		
-        coordinates = new int*[elem_list_size];
-        for (int i = 0; i < elem_list_size; ++i) {
-            coordinates[i] = new int[2];
-        }
-		
-		
+	
         this->elem_list = elem_list;
 
         // Initialize random engine and distribution
@@ -141,6 +142,14 @@ public:
         cout << "Element " << elem_list[index] << " is at {" << coordinates[index][0] << ", " << coordinates[index][1] << "}" << endl;
     }
 
+    bool checkoccupied(int x, int y){
+        if (map[x][y] != ' '){
+            return true;
+        } else {
+            return false;
+        }
+
+    }
     // Prints the coordinates of all elements
     void logallelem() {
         for (int i = 0; i < elem_list_size; i++) {
@@ -227,6 +236,7 @@ public:
     Robot(string robotName, char robotSymbol) {
         name = robotName;
         symbol = robotSymbol;
+        gameMap = game;
     }
     string getName() const {
         return name;
@@ -299,17 +309,12 @@ int main(){
 		}
 	} while (y_axis <= 3 or y_axis >= 13);
 	
-	char array[x_axis][y_axis] = {};
-	for (int x=  0;x < x_axis;x++){
-		for (int y= 0; y< y_axis; y++){
-			array[x][y] = ' ';
-		}
-	}
 	max_robot_limit = (x_axis*y_axis)/9;
 	if (max_robot_limit == 0){
 		max_robot_limit = 1;
 	}
 	char elem_list[max_robot_limit] = {};
+
 	//----------------------Objects Selector--------------------------------
 	cout << "Initializing map..." << endl;
 	cout << "You have selected a " <<x_axis<<" x " << y_axis <<" map" <<endl;
@@ -348,8 +353,18 @@ int main(){
 	//----------------------------Game Loop----------------------------------------------
 
 	int coords[2]; int gc = 0; int buttonpressed = 0;
-	battlefield game = battlefield(x_axis,y_axis);
-	game.randomize(elem_list,count);
+
+
+    //counting length of elem_list to initialize battlefield
+    count = 0;
+	for (char each:elem_list){
+		if (each != '\0'){
+			count+=1;
+		}
+	}
+	battlefield game = battlefield(x_axis,y_axis, count);
+
+	game.randomize(elem_list);
 	game.setup();
 	while(1){
 		gc++;
