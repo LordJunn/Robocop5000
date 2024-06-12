@@ -4,7 +4,7 @@
 #include <map>
 #include <cstdlib>
 #include <stdlib.h>
-#include <time.h> 
+#include <time.h>
 
 // NOTE: Need to make a getCoords in the game loop thing so that we can instantiate robots with the coordinates.
 using namespace std;
@@ -18,9 +18,10 @@ private:
     int x_axis;         // Width of map
     int y_axis;         // Height of map
     char **map;         // 2D array of the map
+    string mapstring;   // used to print the map
 
-    string logs;      // Logs
-    string mapstring; // used to print the map
+protected:
+    string logs; // Logs
 
 public:
     battlefield() {} // Default constructor
@@ -152,10 +153,10 @@ public:
     }
 
     // Changes the coordinates of an element and refreshes the map (coords stored inside battlefield)
-    void changecoords(int index, int *new_coords)
+    void changecoords(int index, int *newcoords)
     {
-        coordinates[index][0] = new_coords[0];
-        coordinates[index][1] = new_coords[1];
+        coordinates[index][0] = newcoords[0];
+        coordinates[index][1] = newcoords[1];
         refresh();
     }
 
@@ -167,7 +168,7 @@ public:
 
     bool checkoccupied(int x, int y)
     {
-        if (map[x][y] != ' ')
+        if (map[x][y_axis - y -1] != ' ')
         {
             return true;
         }
@@ -281,7 +282,7 @@ protected:
     battlefield *gameMap;
     string name;
     char symbol;
-    int coords[1] = {};
+    int x, y;
     int lives = 3;
     int kills = 0;
 
@@ -302,20 +303,22 @@ public:
     }
     int getx() const
     {
-        return coords[0];
+        return x;
     }
     int gety() const
     {
-        return coords[1];
+        return y;
     }
     int getLives() const
     {
         return lives;
     }
-    void changecoords()
+    auto move(int x, int y, int arr[], const int &width, const int &height)
     {
-        int newX = 0;
-        int newY = 0;
+        int oldX = x;
+        int oldY = y;
+        int newX = x;
+        int newY = y;
         int moves = rand() % 8;
         switch (moves)
         {
@@ -344,12 +347,47 @@ public:
             newY--;
             break;
         case 7:
-            newX++;
-            newY--;
+            newX = x++;
+            newY = y--;
             break;
         }
-        int newcoords[] = {newX, newY};
+        if (newX < 0)
+        {
+            newX = 0;
+            cout << "Robot tried to cross the borders, it has wasted a move!\n";
+        }
+        else if (newX >= width)
+        {
+            newX = width - 1;
+            cout << "Robot tried to cross the borders, it has wasted a move!\n";
+        }
+        if (newY < 0)
+        {
+            newY = 0;
+            cout << "Robot tried to cross the borders, it has wasted a move!\n";
+        }
+        else if (newY >= height)
+        {
+            newY = height - 1;
+            cout << "Robot tried to cross the borders, it has wasted a move!\n";
+        }
+        /* if (gameMap->checkoccupied(newX, newY) == true)
+        {
+            newX = oldX;
+            newY = oldY;
+            cout << "There seems to be something in the way...";
+        } */
+        arr[0] = {newX};
+        arr[1] = {newY};
+        updateCoords(arr);
+        return arr;
     }
+    void updateCoords(int arr[])
+    {
+        x = arr[0];
+        y = arr[1];
+    }
+
 };
 
 class Robocop : public Robot
@@ -359,6 +397,8 @@ public:
     {
         name = robotName;
         symbol = robotSymbol;
+        this->x = x;
+        this->y = y;
     }
 };
 class Terminator : public Robot
@@ -368,6 +408,8 @@ public:
     {
         name = robotName;
         symbol = robotSymbol;
+        this->x = x;
+        this->y = y;
     }
 };
 class BlueThunder : public Robot
@@ -377,6 +419,8 @@ public:
     {
         name = robotName;
         symbol = robotSymbol;
+        this->x = x;
+        this->y = y;
     }
 };
 
@@ -467,9 +511,9 @@ int main()
     //----------------------------Game Loop----------------------------------------------
 
     int coords[2];
+    int empty_coords[2];
     int gc = 0;
     int buttonpressed = 0;
-
     // counting length of elem_list to initialize battlefield
     count = 0; // Count for instantiating robots
     for (char each : elem_list)
@@ -507,6 +551,8 @@ int main()
         cout << "--------------------------------------------------------------------------------------------" << endl;
         cout << "Turn " << gc << endl
              << endl;
+        game.changecoords(0, robot_list[0].move(robot_list->getx(),
+        robot_list->gety(), empty_coords, x_axis, y_axis));
         game.printmap();
         game.logallelem();
         game.printlogs();
@@ -520,5 +566,6 @@ int main()
         {
             break;
         }
+        cout << "The new coordinates are " << robot_list->getx() << " and " << robot_list->gety() << endl;
     }
 }
