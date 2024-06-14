@@ -15,13 +15,13 @@ private:
     char *elem_list;    // List of all types of robots
     int **coordinates;  // List of all robot's coordinates
     int elem_list_size; // Size of elem_list
-    int x_axis;         // Width of map
-    int y_axis;         // Height of map
     char **map;         // 2D array of the map
     string mapstring;   // used to print the map
 
 protected:
     string logs; // Logs
+    int x_axis;  // Width of map
+    int y_axis;  // Height of map
 
 public:
     battlefield() {} // Default constructor
@@ -125,9 +125,12 @@ public:
         // Place elements on the map
         for (int i = 0; i < elem_list_size; ++i)
         {
-            int x = coordinates[i][0];
-            int y = y_axis - coordinates[i][1] - 1;
-            map[x][y] = elem_list[i];
+            if (coordinates[i][0] != -99 && coordinates[i][1] != -99)
+            {
+                int x = coordinates[i][0];
+                int y = y_axis - coordinates[i][1] - 1;
+                map[x][y] = elem_list[i];
+            }
         }
     }
 
@@ -146,9 +149,12 @@ public:
         // Place elements on the map
         for (int i = 0; i < elem_list_size; ++i)
         {
-            int x = coordinates[i][0];
-            int y = y_axis - coordinates[i][1] - 1;
-            map[x][y] = elem_list[i];
+            if (coordinates[i][0] != -99 && coordinates[i][1] != -99)
+            {
+                int x = coordinates[i][0];
+                int y = y_axis - coordinates[i][1] - 1;
+                map[x][y] = elem_list[i];
+            }
         }
     }
 
@@ -168,7 +174,7 @@ public:
 
     bool checkoccupied(int x, int y)
     {
-        if (map[x][y_axis - y -1] != ' ')
+        if (map[x][y_axis - y - 1] != ' ')
         {
             return true;
         }
@@ -225,6 +231,30 @@ public:
         cout << mapstring << endl;
         mapstring = "";
     }
+
+    void destroyElem(int x, int y)
+    {
+        int index = findIndex(x, y);
+        if (index != -1)
+        {
+            elem_list[index] = ' ';
+            coordinates[index][0] = -99;
+            coordinates[index][1] = -99;
+        }
+        return;
+    }
+    int findIndex(int x, int y)
+    {
+        for (int i = 0; i < elem_list_size; ++i)
+        {
+            if (coordinates[i][0] == x && coordinates[i][1] == y)
+            {
+                return i; // Return the row index if the pair (x, y) is found
+            }
+        }
+        return -1;
+    }
+    // Getters
     int getX(int index)
     {
         return coordinates[index][0];
@@ -232,6 +262,14 @@ public:
     int getY(int index)
     {
         return coordinates[index][1];
+    }
+    int getWidth() const
+    {
+        return x_axis;
+    }
+    int getHeight() const
+    {
+        return y_axis;
     }
 };
 
@@ -282,17 +320,15 @@ protected:
     battlefield *gameMap;
     string name;
     char symbol;
-    int x, y;
+    int index;
+    int pos[2];
     int lives = 3;
     int kills = 0;
+    bool detect = false;
+    int detectPos[2] = {0};
 
 public:
     Robot() {}
-    Robot(battlefield *gameMap, string robotName, char robotSymbol)
-    {
-        name = robotName;
-        symbol = robotSymbol;
-    }
     string getName() const
     {
         return name;
@@ -301,126 +337,171 @@ public:
     {
         return symbol;
     }
-    int getx() const
+    int getX() const
     {
-        return x;
+        return pos[0];
     }
-    int gety() const
+    int getY() const
     {
-        return y;
+        return pos[1];
     }
     int getLives() const
     {
         return lives;
     }
-    auto move(int x, int y, int arr[], const int &width, const int &height)
+    int getIndex() const
+    {
+        return index;
+    }
+    void move(int x, int y) // Finished move
     {
         int oldX = x;
         int oldY = y;
         int newX = x;
         int newY = y;
+        int arr[2];
         int moves = rand() % 8;
         switch (moves)
         {
         case 0:
-            newY++;
+            newY++; // Up
             break;
         case 1:
-            newX--;
+            newX--; // Left
             break;
         case 2:
-            newY--;
+            newY--; // Down
             break;
         case 3:
-            newX++;
+            newX++; // Right
             break;
         case 4:
-            newX--;
+            newX--; // Up left
             newY++;
             break;
         case 5:
-            newX++;
+            newX++; // Up right
             newY++;
             break;
         case 6:
-            newX--;
+            newX--; // Down left
             newY--;
             break;
         case 7:
-            newX = x++;
-            newY = y--;
+            newX++; // Down right
+            newY--;
             break;
         }
-        if (newX < 0)
-        {
-            newX = 0;
-            cout << "Robot tried to cross the borders, it has wasted a move!\n";
-        }
-        else if (newX >= width)
-        {
-            newX = width - 1;
-            cout << "Robot tried to cross the borders, it has wasted a move!\n";
-        }
-        if (newY < 0)
-        {
-            newY = 0;
-            cout << "Robot tried to cross the borders, it has wasted a move!\n";
-        }
-        else if (newY >= height)
-        {
-            newY = height - 1;
-            cout << "Robot tried to cross the borders, it has wasted a move!\n";
-        }
-        /* if (gameMap->checkoccupied(newX, newY) == true)
+        cout << "Robot tried to move to " << newX << "," << newY << endl;
+        if (newX < 0 || newX >= gameMap->getWidth() || newY < 0 || newY >= gameMap->getHeight())
         {
             newX = oldX;
             newY = oldY;
-            cout << "There seems to be something in the way...";
-        } */
+            cout << "Robot tried to cross the borders, it has wasted a move!\n";
+        }
+        else if (gameMap->checkoccupied(newX, newY) == true)
+        {
+            newX = oldX;
+            newY = oldY;
+            cout << "There seems to be something in the way...\n";
+        }
         arr[0] = {newX};
         arr[1] = {newY};
         updateCoords(arr);
-        return arr;
+        gameMap->changecoords(getIndex(), arr);
+    }
+    void look(int x, int y) // Finished look
+    {
+        cout << "Robot is performing a look...\n";
+        int rangeX = pos[0] + x;
+        int rangeY = pos[1] + y;
+        for (int i = rangeY - 1; i <= rangeY + 1; i++)
+        {
+            for (int j = rangeX - 1; j <= rangeX + 1; j++)
+            {
+                if (j < 0 || j >= gameMap->getWidth() || i < 0 || i >= gameMap->getHeight())
+                    continue;
+                else if (j == rangeX && i == rangeY)
+                    continue;
+                else
+                {
+                    gameMap->checkoccupied(j, i);
+                    if (gameMap->checkoccupied(j, i) == true)
+                    {
+                        detect = true;
+                        detectPos[0] = j;
+                        detectPos[1] = i;
+                        cout << "Target spotted at: " << detectPos[0] << "," << detectPos[1] << endl;
+                    }
+                }
+            }
+        }
+    }
+    void stomp(int x, int y) // Finished stomp
+    {
+        if (detect)
+        {
+            gameMap->destroyElem(detectPos[0], detectPos[1]);
+            gameMap->changecoords(getIndex(), detectPos);
+            updateCoords(detectPos);
+            resetDetect();
+            gameMap->refresh();
+        }
+        else
+        {
+            move(x, y);
+        }
+    }
+    void resetDetect()
+    {
+        detect = false;
+        detectPos[0] = 0;
+        detectPos[1] = 0;
     }
     void updateCoords(int arr[])
     {
-        x = arr[0];
-        y = arr[1];
+        pos[0] = arr[0];
+        pos[1] = arr[1];
     }
-
 };
 
 class Robocop : public Robot
 {
 public:
-    Robocop(battlefield *gameMap, string robotName, char robotSymbol, int x, int y)
+    Robocop(battlefield *gameMap, string robotName, char robotSymbol, int x, int y, int i)
     {
         name = robotName;
         symbol = robotSymbol;
-        this->x = x;
-        this->y = y;
+        this->pos[0] = x;
+        this->pos[1] = y;
+        this->gameMap = gameMap;
+        this->index = i;
     }
 };
 class Terminator : public Robot
 {
 public:
-    Terminator(battlefield *gameMap, string robotName, char robotSymbol, int x, int y)
+    Terminator(battlefield *gameMap, string robotName, char robotSymbol, int x, int y, int i)
     {
         name = robotName;
         symbol = robotSymbol;
-        this->x = x;
-        this->y = y;
+        this->pos[0] = x;
+        this->pos[1] = y;
+        this->gameMap = gameMap;
+        this->index = i;
     }
 };
 class BlueThunder : public Robot
 {
 public:
-    BlueThunder(battlefield *gameMap, string robotName, char robotSymbol, int x, int y)
+    BlueThunder(battlefield *gameMap, string robotName, char robotSymbol, int x, int y, int i)
     {
         name = robotName;
         symbol = robotSymbol;
-        this->x = x;
-        this->y = y;
+        this->pos[0] = x;
+        this->pos[1] = y;
+        this->gameMap = gameMap;
+        this->index = i;
     }
 };
 
@@ -509,11 +590,9 @@ int main()
     }
 
     //----------------------------Game Loop----------------------------------------------
-
-    int coords[2];
-    int empty_coords[2];
     int gc = 0;
     int buttonpressed = 0;
+    int *test;
     // counting length of elem_list to initialize battlefield
     count = 0; // Count for instantiating robots
     for (char each : elem_list)
@@ -531,15 +610,15 @@ int main()
     {
         if (elem_list[i] == 'R')
         {
-            robot_list[i] = Robocop(&game, "Robocop", 'R', game.getX(i), game.getY(i));
+            robot_list[i] = Robocop(&game, "Robocop", 'R', game.getX(i), game.getY(i), i);
         }
         else if (elem_list[i] == 'T')
         {
-            robot_list[i] = Terminator(&game, "Terminator", 'T', game.getX(i), game.getY(i));
+            robot_list[i] = Terminator(&game, "Terminator", 'T', game.getX(i), game.getY(i), i);
         }
         else if (elem_list[i] == 'B')
         {
-            robot_list[i] = BlueThunder(&game, "BlueThunder", 'B', game.getX(i), game.getY(i));
+            robot_list[i] = BlueThunder(&game, "BlueThunder", 'B', game.getX(i), game.getY(i), i);
         }
     }
     cout << "Finished instantiating robots!\n";
@@ -551,8 +630,10 @@ int main()
         cout << "--------------------------------------------------------------------------------------------" << endl;
         cout << "Turn " << gc << endl
              << endl;
-        game.changecoords(0, robot_list[0].move(robot_list->getx(),
-        robot_list->gety(), empty_coords, x_axis, y_axis));
+        // Testing stuff
+        robot_list[0].look(0, 0);
+        robot_list[0].stomp(robot_list->getX(), robot_list->getY());
+        // Testing end
         game.printmap();
         game.logallelem();
         game.printlogs();
@@ -566,6 +647,5 @@ int main()
         {
             break;
         }
-        cout << "The new coordinates are " << robot_list->getx() << " and " << robot_list->gety() << endl;
     }
 }
