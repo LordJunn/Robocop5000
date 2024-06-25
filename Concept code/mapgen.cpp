@@ -6,7 +6,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-// NOTE: Need to make a getCoords in the game loop thing so that we can instantiate robots with the coordinates.
 using namespace std;
 
 class battlefield
@@ -329,6 +328,10 @@ protected:
 
 public:
     Robot() {}
+    virtual void sequence()
+    {
+        cout << "Sequence not implemented" << endl;
+    }
     string getName() const
     {
         return name;
@@ -349,62 +352,83 @@ public:
     {
         return lives;
     }
+    int killed()
+    {
+        return lives--;
+    }
     int getIndex() const
     {
         return index;
     }
     void move(int x, int y) // Finished move
     {
-        int oldX = x;
-        int oldY = y;
         int newX = x;
         int newY = y;
         int arr[2];
-        int moves = rand() % 8;
-        switch (moves)
-        {
-        case 0:
-            newY++; // Up
-            break;
-        case 1:
-            newX--; // Left
-            break;
-        case 2:
-            newY--; // Down
-            break;
-        case 3:
-            newX++; // Right
-            break;
-        case 4:
-            newX--; // Up left
-            newY++;
-            break;
-        case 5:
-            newX++; // Up right
-            newY++;
-            break;
-        case 6:
-            newX--; // Down left
-            newY--;
-            break;
-        case 7:
-            newX++; // Down right
-            newY--;
-            break;
+        int moves;
+        do {
+            moves = rand() % 8;
+            switch (moves)
+            {
+            case 0:
+                y = 1;
+                newX += x;
+                break;
+            case 1:
+                x = 1;
+                y = 1;
+                newX += x;
+                newY += y;
+                break;
+            case 2:
+                x = 1;
+                newX += x;
+                break;
+            case 3:
+                x = 1;
+                y = -1;
+                newX += x;
+                newY += y;
+                break;
+            case 4:
+                y = -1;
+                newY += y;
+                break;
+            case 5:
+                x = -1;
+                y = -1;
+                newX += x;
+                newY += y;
+                break;
+            case 6:
+                x = -1;
+                newX += x;
+                break;
+            case 7:
+                x = -1;
+                y = 1;
+                newX += x;
+                newY += y;
+                break;
+            default:
+                break;
         }
-        cout << "Robot tried to move to " << newX << "," << newY << endl;
         if (newX < 0 || newX >= gameMap->getWidth() || newY < 0 || newY >= gameMap->getHeight())
-        {
-            newX = oldX;
-            newY = oldY;
-            cout << "Robot tried to cross the borders, it has wasted a move!\n";
-        }
+            {
+                newX = getX();
+                newY = getY();
+                x = 0;
+                y = 0;
+            }
         else if (gameMap->checkoccupied(newX, newY) == true)
-        {
-            newX = oldX;
-            newY = oldY;
-            cout << "There seems to be something in the way...\n";
-        }
+            {
+                newX = getX();
+                newY = getY();
+                x = 0;
+                y = 0;
+            }
+        } while (x == 0 && y == 0);
+        cout << getName() << " has moved to " << newX << "," << newY << endl;
         arr[0] = {newX};
         arr[1] = {newY};
         updateCoords(arr);
@@ -412,7 +436,7 @@ public:
     }
     void look(int x, int y) // Finished look
     {
-        cout << "Robot is performing a look...\n";
+        cout << getName() << " is performing a look...\n";
         int rangeX = pos[0] + x;
         int rangeY = pos[1] + y;
         for (int i = rangeY - 1; i <= rangeY + 1; i++)
@@ -426,7 +450,7 @@ public:
                 else
                 {
                     gameMap->checkoccupied(j, i);
-                    if (gameMap->checkoccupied(j, i) == true)
+                    if (gameMap->checkoccupied(j, i))
                     {
                         detect = true;
                         detectPos[0] = j;
@@ -452,6 +476,24 @@ public:
             move(x, y);
         }
     }
+    void shoot(int x, int y) // Finished shoot
+    {
+        cout << "Passed in: " << x << ", " << y << endl;
+        int shootX = pos[0] + x; // Shoot this positionX
+        int shootY = pos[1] + y; // Shoot this positionY
+        cout << getName() << " has shot {" << shootX << ", " << shootY << "} " << endl;
+            if (gameMap->checkoccupied(shootX, shootY))
+            {
+                gameMap->destroyElem(shootX, shootY);
+                gameMap->refresh();
+                cout << getName() << " in position {" << getX() << ", " << getY() << "} has killed {" << shootX << ", " << shootY << "} " << endl;
+            }
+            else
+            {
+                cout << getName() << " has missed!\n";
+            } 
+        return;
+    }
     void resetDetect()
     {
         detect = false;
@@ -463,10 +505,51 @@ public:
         pos[0] = arr[0];
         pos[1] = arr[1];
     }
+int getRandom(int selection)
+{
+    int randX, x = 0;
+    int limitPosX = gameMap->getWidth() - getX();
+    int limitNegX = getX();
+    int randY, y = 0;
+    int limitPosY = gameMap->getHeight() - getY();
+    int limitNegY = getY();
+    do {
+        // Randomizer X
+        randX = rand() % 2;
+        if (randX == 0 && limitPosX > 0)
+        {
+            x = rand() % limitPosX;
+        }
+        else if (limitNegX > 0)
+        {
+            x = rand() % limitNegX;
+            x = -x;
+        }
+        // Randomizer Y
+        randY = rand() % 2;
+        if (randY == 0 && limitPosY > 0)
+        {
+            y = rand() % limitPosY;
+        }
+        else if (limitNegY > 0)
+        {
+            y = rand() % limitNegY;
+            y = -y;
+        }
+    } while (x == 0 && y == 0);
+    if (selection == 0)
+        return x;
+    else if (selection == 1)
+        return y;
+    else
+        return -1;
+}
 };
 
 class Robocop : public Robot
 {
+private:
+int shootX, shootY;
 public:
     Robocop(battlefield *gameMap, string robotName, char robotSymbol, int x, int y, int i)
     {
@@ -476,6 +559,20 @@ public:
         this->pos[1] = y;
         this->gameMap = gameMap;
         this->index = i;
+    }
+    void sequence()
+    {
+        cout << " --- Sequence: Robocop ---\n";
+        move(getX(), getY());
+        for (int i = 0; i < 3; i++)
+        {
+            do {
+            shootX = getRandom(0);
+            shootY = getRandom(1);
+        } while (shootX == 0 && shootY == 0);
+        shoot(shootX, shootY);
+        }
+        return;
     }
 };
 class Terminator : public Robot
@@ -490,9 +587,19 @@ public:
         this->gameMap = gameMap;
         this->index = i;
     }
+    void sequence()
+    {
+        cout << " --- Sequence: Terminator ---\n";
+        look(getX(), getY());
+        stomp(getX(), getY());
+        return;
+    }
 };
 class BlueThunder : public Robot
 {
+private:
+    int counter = 0;
+
 public:
     BlueThunder(battlefield *gameMap, string robotName, char robotSymbol, int x, int y, int i)
     {
@@ -502,6 +609,86 @@ public:
         this->pos[1] = y;
         this->gameMap = gameMap;
         this->index = i;
+    }
+    void btshoot()
+    {
+        int x = 0, y = 0;
+        int checkX = getX();
+        int checkY = getY();
+        do {
+            switch (counter)
+            {
+            case 0:
+                y = 1;
+                checkX += x;
+                checkY += y;
+                counter++;
+                break;
+            case 1:
+                x = 1;
+                y = 1;
+                checkX += x;
+                checkY += y;
+                counter++;
+                break;
+            case 2:
+                x = 1;
+                checkX += x;
+                checkY += y;
+                counter++;
+                break;
+            case 3:
+                x = 1;
+                y = -1;
+                checkX += x;
+                checkY += y;
+                counter++;
+                break;
+            case 4:
+                y = -1;
+                checkX += x;
+                checkY += y;
+                counter++;
+                break;
+            case 5:
+                x = -1;
+                y = -1;
+                checkX += x;
+                checkY += y;
+                counter++;
+                break;
+            case 6:
+                x = -1;
+                checkX += x;
+                checkY += y;
+                counter++;
+                break;
+            case 7:
+                x = -1;
+                y = 1;
+                checkX += x;
+                checkY += y;
+                counter = 0;
+                break;
+            default:
+                break;
+            }
+            if (checkX < 0 || checkX >= gameMap->getWidth() || checkY < 0 || checkY >= gameMap->getHeight())
+            {
+                checkX = getX();
+                checkY = getY();
+                x = 0;
+                y = 0;
+                counter++;
+            }
+        } while (x == 0 && y == 0);
+        shoot(x, y);
+    }
+    void sequence()
+    {
+        cout << " --- Sequence: BlueThunder ---\n";
+        btshoot();
+        return;
     }
 };
 
@@ -579,15 +766,6 @@ int main()
             break;
         }
     }
-    // Count array length without '' empty char
-    count = 0;
-    for (char each : elem_list)
-    {
-        if (each != '\0')
-        {
-            count += 1;
-        }
-    }
 
     //----------------------------Game Loop----------------------------------------------
     int gc = 0;
@@ -605,20 +783,20 @@ int main()
     battlefield game = battlefield(x_axis, y_axis, count);
     game.randomize(elem_list);
     game.setup();
-    Robot robot_list[count] = {}; // Array for instantiated robots
+    Robot *robot_list[count] = {}; // Array for instantiated robots
     for (int i = 0; i < count; i++)
     {
         if (elem_list[i] == 'R')
         {
-            robot_list[i] = Robocop(&game, "Robocop", 'R', game.getX(i), game.getY(i), i);
+            robot_list[i] = new Robocop(&game, "Robocop", 'R', game.getX(i), game.getY(i), i);
         }
         else if (elem_list[i] == 'T')
         {
-            robot_list[i] = Terminator(&game, "Terminator", 'T', game.getX(i), game.getY(i), i);
+            robot_list[i] = new Terminator(&game, "Terminator", 'T', game.getX(i), game.getY(i), i);
         }
         else if (elem_list[i] == 'B')
         {
-            robot_list[i] = BlueThunder(&game, "BlueThunder", 'B', game.getX(i), game.getY(i), i);
+            robot_list[i] = new BlueThunder(&game, "BlueThunder", 'B', game.getX(i), game.getY(i), i);
         }
     }
     cout << "Finished instantiating robots!\n";
@@ -630,14 +808,27 @@ int main()
         cout << "--------------------------------------------------------------------------------------------" << endl;
         cout << "Turn " << gc << endl
              << endl;
-        // Testing stuff
-        robot_list[0].look(0, 0);
-        robot_list[0].stomp(robot_list->getX(), robot_list->getY());
-        // Testing end
         game.printmap();
         game.logallelem();
         game.printlogs();
         game.printcoords(4);
+        // Testing stuff
+        for (int i = 0; i < count; i++)
+        {
+            if (robot_list[i]->getSymbol() == 'R')
+            {
+                robot_list[i]->sequence();
+            }
+            else if (robot_list[i]->getSymbol() == 'T')
+            {
+                robot_list[i]->sequence();
+            }
+            else if (robot_list[i]->getSymbol() == 'B')
+            {
+                robot_list[i]->sequence();
+            }
+        }
+        // Testing end
         int buttonpressed = getch();
         if (buttonpressed == 0 || buttonpressed == 224)
         {
@@ -648,4 +839,5 @@ int main()
             break;
         }
     }
+    return 0;
 }

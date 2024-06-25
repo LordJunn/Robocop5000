@@ -1,1 +1,1 @@
-oldX;
+cout << "Current random: " << x << ", " << y << endl;
