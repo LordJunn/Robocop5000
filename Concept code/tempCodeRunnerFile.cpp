@@ -1,1 +1,2 @@
-cout << "Current random: " << x << ", " << y << endl;
+
+#include <map>
