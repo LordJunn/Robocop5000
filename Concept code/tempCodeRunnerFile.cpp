@@ -1,1 +1,0 @@
-ass_list[i] = Terminator(&game, "Terminator", 'T');
