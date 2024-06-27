@@ -6,9 +6,10 @@
 #include <sstream>
 #include <cstdlib>
 #include <stdlib.h>
-#include <time.h>
+#include <time.h> 
 
 using namespace std;
+
 
 template <typename T1, typename T2> 
 class mapper {
@@ -136,9 +137,10 @@ public:
 	void accessfile();
 
     // Randomly places elements on the battlefield, ensuring no duplicate coordinates
-    void randomize(char* elem_list) {
+    void randomize(char* elem_list, string* elem_name_list) {
 	
         this->elem_list = elem_list;
+		this->elem_name_list = elem_name_list;
 
         // Initialize random engine and distribution
         srand(time(0));
@@ -224,17 +226,18 @@ public:
     // Prints the coordinates of all elements
     void logallelem() {
         for (int i = 0; i < elem_list_size; i++) {
-            logs += "Element ";
-            logs += elem_list[i];
-            logs += " is at {";
-			if (coordinates[i][0] != -99){
-				logs += to_string(coordinates[i][0]);
-				logs += ", ";
-				logs += to_string(coordinates[i][1]);
-			} else {
-				logs += "HEAVEN";
+            if (revivecount[i] > 0){
+				logs += elem_name_list[i];
+				if (coordinates[i][0] != -99){
+					logs += " is at {";
+					logs += to_string(coordinates[i][0]);
+					logs += ", ";
+					logs += to_string(coordinates[i][1]);
+					logs += "}\n";
+				} else {
+					logs += " is temporary dead\n";
+				}
 			}
-            logs += "}\n";
         }
     }
 
@@ -344,6 +347,10 @@ public:
 	void change_elem_list(int i, char x){
 		elem_list[i] = x;
 	}
+
+	string get_name(int i){
+		return elem_name_list[i];
+	}
 };
 
 void battlefield::manualcreate(){
@@ -370,7 +377,7 @@ void battlefield::manualcreate(){
 	}
 
 	char temp_elem_list[max_robot_limit] = {};
-
+	string temp_elem_name_list[max_robot_limit] = {};
 	//----------------------Objects Selector--------------------------------
 	cout << "Initializing map..." << endl;
 	cout << "You have selected a " <<x_axis<<" x " << y_axis <<" map" <<endl;
@@ -389,7 +396,8 @@ void battlefield::manualcreate(){
 		for (int k = 0; k < this_robot_count; k++){
 			for (int j=0;j < max_robot_limit;j++){
 				if (temp_elem_list[j] == '\0'){
-					temp_elem_list[j] = all_robot_symbol_type_map.get(all_robot_types[i]);
+					temp_elem_list[j] = all_robot_symbol[i];
+					temp_elem_name_list[j] = all_robot_types[i];
 					break;
 				}
 			}
@@ -405,15 +413,17 @@ void battlefield::manualcreate(){
 		if (each != '\0'){
 			count+=1;
 		}
-	}
+	} 
 
 	elem_list = new char[count];
+	elem_name_list = new string[count];
 	for (int x = 0; x < count ; x++){
 		elem_list[x] = temp_elem_list[x];
+		elem_name_list[x] =  temp_elem_name_list[x];
 	}
 	initialize_map();
 	initialize_size_n_coords(count);
-	randomize(elem_list);
+	randomize(elem_list, elem_name_list);
 	setup();
 
 }
@@ -564,7 +574,7 @@ public:
         {
             for (int j = pos[1] - 1; j <= pos[1] + 1; j++)
             {
-                if (j < 0 || j >= gameMap->getWidth() || i < 0 || i >= gameMap->getHeight()){
+                if (j < 0 || j >= gameMap->getHeight() || i < 0 || i >= gameMap->getWidth()){
                     continue;
 				}
                 else if (i == pos[0] && j == pos[1])
@@ -600,7 +610,7 @@ public:
         do{
 			targetx = rand()% gameMap->getWidth();
 			targety = rand()% gameMap->getHeight();
-		} while((targetx == pos[0] && targety == pos[1])|| targetx+targety > 10);
+		} while((targetx == pos[0] && targety == pos[1])|| targetx + targety > 10);
         cout << name << " has shot {" << targetx << ", " << targety << "} " << endl;
 		if (gameMap->checkoccupied(targetx, targety))
 		{
@@ -687,7 +697,7 @@ public:
 		for (int i = pos[0] - 1; i <= pos[0] + 1; i++)
 		{
 			for (int j = pos[1] - 1; j <= pos[1] + 1; j++){
-				if (j < 0 || j >= gameMap->getWidth() || i < 0 || i >= gameMap->getHeight()){
+				if (j < 0 || j >= gameMap->getHeight() || i < 0 || i >= gameMap->getWidth()){
 					continue;
 				}
 				else if (i == pos[0] && j == pos[1])
@@ -939,7 +949,10 @@ public:
     }
 };
 
-
+void endgame(string name){
+	cout << "GAME ENDED! THE WINNER IS " << name << "!" <<endl;
+	exit(0);
+}
 
 
 int main(){
@@ -965,6 +978,7 @@ int main(){
     //----------------------------Game Loop----------------------------------------------
     int gc = 0;
     int buttonpressed = 0;
+	int robotsleft = game.get_elem_list_size();
 	
     // counting length of elem_list to initialize battlefield
     int count = 0; // Count for instantiating robots
@@ -984,6 +998,22 @@ int main(){
 			{
 				robot_list[i] = new BlueThunder(&game, "BlueThunder", game.getX(i), game.getY(i), i);
 			} 
+			else if (game.elem_list[i] == 'A')
+			{	
+				robot_list[i] = new TerminatorRoboCop(&game, "TerminatorRoboCop", game.getX(i), game.getY(i), i);
+			}
+			else if (game.elem_list[i] == 'M')
+			{
+				robot_list[i] = new Madbot(&game, "Madbot", game.getX(i), game.getY(i), i);
+			} 
+			else if (game.elem_list[i] == 'E')
+			{	
+				robot_list[i] = new RoboTank(&game, "RoboTank", game.getX(i), game.getY(i), i);
+			}
+			else if (game.elem_list[i] == 'U')
+			{
+				robot_list[i] = new UltimateRobot(&game, "UltimateRobot", game.getX(i), game.getY(i), i);
+			} 
     }
     cout << "Finished instantiating robots!\n\nOriginal Presets: \n";
 	game.printmap();
@@ -1001,15 +1031,27 @@ int main(){
 		for (int i = 0; i < game.get_elem_list_size(); i++){
 			if (game.checkrevive(i) == 1){
 				game.revive(i);
+				if (game.checklives(i) == 0){
+					robotsleft -= 1;
+				}
 				if (game.checklives(i) != 0){
 					cout << game.elem_list[i] << " is revived at " << game.getX(i) << "," << game.getY(i) << "!" << endl;
 					cout << "Lives left: " << game.checklives(i) << endl << endl;
 					robot_list[i]->refreshpos(game.getX(i),game.getY(i));
 				}
+
 			}
 		}
-	string all_robot_types[7] = {"RoboCop","Terminator","BlueThunder","TerminatorRoboCop","Madbot","RoboTank","UltimateRobot"};
-	char all_robot_symbol[7] = {'R','T','B','A','M','E','U'};
+		if (robotsleft == 1){
+			for (int i = 0; i < game.get_elem_list_size(); i++){
+				if (game.checklives(i) != 0){
+					endgame(game.get_name(i));
+				}
+			}
+		}
+		robotsleft = game.get_elem_list_size();
+
+		
         for (int i = 0; i < game.get_elem_list_size(); i++)
         {	
 			if (game.checkrevive(i) == 0){
@@ -1019,7 +1061,7 @@ int main(){
 					cout << robot_list[i]->showname() ;
 					if (game.elem_list[i] == 'R'||game.elem_list[i] == 'T'){
 						game.change_elem_list(i,'A');
-						robot_list[i] = new TerminatorRoboCop(&game, "TerminatorRobocop", game.getX(i), game.getY(i), i);
+						robot_list[i] = new TerminatorRoboCop(&game, "TerminatorRoboCop", game.getX(i), game.getY(i), i);
 					} else if (game.elem_list[i] == 'A'||game.elem_list[i] == 'E'){
 						game.change_elem_list(i,'U');
 						robot_list[i] = new UltimateRobot(&game, "UltimateRobot", game.getX(i), game.getY(i), i);						
@@ -1034,7 +1076,6 @@ int main(){
 				}
 			}
         }
-		
         // Testing end
         game.printmap();
         game.logallelem();
