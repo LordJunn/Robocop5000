@@ -1,6 +1,8 @@
 #ifndef BATTLEFIELD_H
 #define BATTLEFIELD_H
 
+#include "print.h"
+
 #include <conio.h>
 #include <iostream>
 #include <string>
@@ -12,6 +14,9 @@
 #include <algorithm>
 #include <cctype>
 #include <time.h> 
+
+extern std::ofstream resultfile;
+
 using namespace std;
 
 template <typename T1, typename T2> 
@@ -64,11 +69,13 @@ protected:
 	
 	int target_steps; //Final Step
 	int current_step; //current step
-
+	ofstream resultfile;
+	
     char** map; // 2D array of the map
 
     string logs; // Logs
     string mapstring; // used to print the map
+	
 	
 	string all_robot_types[8] = {"RoboCop","Terminator","BlueThunder","ExplodoBot","TerminatorRoboCop","Madbot","RoboTank","UltimateRobot"};
 	char all_robot_symbol[8] = {'R','T','B','X','A','M','E','U'};
@@ -219,7 +226,7 @@ public:
 
     // Prints the coordinates of a specific element
     void printcoords(int index) {
-        cout << "Element " << elem_list[index] << " is at {" << coordinates[index][0] << ", " << coordinates[index][1] << "}" << endl;
+        print("Element ",elem_list[index]," is at {",coordinates[index][0],", ",coordinates[index][1],"}\n");
     }
 
     bool checkoccupied(int x, int y){
@@ -249,7 +256,7 @@ public:
     }
 
     void printlogs() {
-        cout << logs;
+        print(logs);
         logs = "";
     }
 
@@ -272,7 +279,8 @@ public:
             }
             mapstring += "+\n";
         }
-        cout << mapstring << endl;
+        print(mapstring);
+		print("\n");
         mapstring = "";
     }
 
@@ -351,6 +359,10 @@ public:
 		}
 	}
 	
+	int get_steps(){
+		return target_steps;
+	}
+	
 	void change_elem_list(int i, char x){
 		elem_list[i] = x;
 	}
@@ -361,6 +373,7 @@ public:
 };
 
 void battlefield::manualcreate(){
+	target_steps = 9999;
 	do{
 		cout << "Enter x-axis (>3 and <30): " ;
 		cin >> x_axis;
@@ -441,7 +454,7 @@ void battlefield::accessfile(){
 	do {
 		cout << "Enter filename: ";
 		cin >> filename;
-
+		filename = "Inputs/"+filename;
 		if (!filename.empty()) {
 			ifstream file(filename);
 			if (file.good()) {
@@ -529,7 +542,8 @@ void battlefield::accessfile(){
 		coordinates[i][1] = stoi(y);
 		
 	}
-
+	file.close();
+	
 	setup();
 }
 #endif

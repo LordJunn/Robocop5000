@@ -1,6 +1,8 @@
 #ifndef ROBOT_H
 #define ROBOT_H
 
+#include "print.h"
+
 #include <conio.h>
 #include <iostream>
 #include <string>
@@ -8,6 +10,9 @@
 #include <cstdlib>
 #include <stdlib.h>
 #include <time.h>
+
+extern std::ofstream resultfile;
+
 // Base abstract class for all robots
 class Robot {
 protected:
@@ -51,7 +56,7 @@ public:
     SeeingRobot(battlefield* field, string name,int x, int y, int i) : Robot(field,name,x,y,i) {}
 
     void operate() override {
-        cout << name << " is performing a look...\n";
+        print(name, " is performing a look...\n");
         for (int i = pos[0] - 1; i <= pos[0] + 1; i++)
         {
             for (int j = pos[1] - 1; j <= pos[1] + 1; j++)
@@ -66,10 +71,10 @@ public:
                     if (gameMap->checkoccupied(i, j))
                     {
                         detect = true;
-						cout << "Terminator is at " << pos[0]  <<" " << pos[1] <<endl;
+						print(name," is at ",pos[0]," ",pos[1],"\n");
                         detectPos[0] = i;
                         detectPos[1] = j;
-                        cout << "Target spotted at: " << detectPos[0] << "," << detectPos[1] << endl;
+                        print("Target spotted at: ",detectPos[0],",",detectPos[1],"\n");
 						return;
                     }
                 }
@@ -92,13 +97,13 @@ public:
         do{
 			targetx = rand()% gameMap->getWidth();
 			targety = rand()% gameMap->getHeight();
-		} while((targetx == pos[0] && targety == pos[1])|| targetx + targety > 10);
-        cout << name << " has shot {" << targetx << ", " << targety << "} " << endl;
+		} while((targetx == pos[0] && targety == pos[1])|| (targetx-pos[0])*(targetx-pos[0]) + (targety-pos[1])*(targety-pos[1]) > 81); //using pythagoras' formula to make sure not over a distance of 10, using 81 due to how our program's calculation
+        print(name," has shot {", targetx,", ", targety, "} \n");
 		if (gameMap->checkoccupied(targetx, targety))
 		{
 			gameMap->destroyElem(targetx, targety);
 			gameMap->refresh();
-			cout << name << " has killed the robot at {" << targetx << ", " << targety << "} " << endl;
+			print(name, " has killed the robot at {", targetx, ", ", targety, "} ","\n");
 			kills += 1;
 		}
         return;
@@ -160,12 +165,12 @@ public:
             }
 			break;
         } while (1);
-        cout << name << " has shot {" << targetx << ", " << targety << "} " << endl;
+        print(name, " has shot {", targetx, ", ", targety, "} \n");
 		if (gameMap->checkoccupied(targetx, targety))
 		{
 			gameMap->destroyElem(targetx, targety);
 			gameMap->refresh();
-			cout << name <<" has killed the robot at {" << targetx << ", " << targety << "} " << endl;
+			print(name," has killed the robot at {", targetx, ", ", targety, "} \n") ;
 			kills += 1;
 		}
 	}
@@ -188,12 +193,12 @@ public:
 					if (count == random){
 						targetx = i;
 						targety = j;
-						cout << name << " shoot at " << targetx <<"," << targety << endl;
+						print(name, " shoot at ", targetx, ",", targety,"\n");
 						if (gameMap->checkoccupied(targetx, targety))
 						{
 							gameMap->destroyElem(targetx, targety);
 							gameMap->refresh();
-							cout << name <<" has killed the robot at {" << targetx << ", " << targety << "} " << endl;
+							print(name," has killed the robot at {", targetx, ", ", targety, "} \n") ;
 							kills += 1;
 						}
 						break;
@@ -261,7 +266,7 @@ public:
 		detectPos[1] = targety;
         pos[0] = targetx;
 		pos[1] = targety;
-		cout << name << " set pos to " <<pos[0] << ", "<< pos[1]<<endl;
+		print( name, " set pos to ", pos[0], ", ", pos[1], "\n");
         gameMap->changecoords(index, pos);
     }
 };
@@ -287,7 +292,7 @@ public:
                 {	
                     if (gameMap->checkoccupied(i, j))
                     {
-						cout << "Enemy detected. Self explode initiated!" << endl;
+						print( "Enemy detected. Self explode initiated!\n");
 						for (int i2 = pos[0] - 1; i2 <= pos[0] + 1; i2++)
 						{
 							for (int j2 = pos[1] - 1; j2 <= pos[1] + 1; j2++)
@@ -305,7 +310,7 @@ public:
 									{
 										gameMap->destroyElem(targetx, targety);
 										gameMap->refresh();
-										cout << name <<"'s explosion has killed the robot at {" << targetx << ", " << targety << "} " << endl;
+										print( name, "'s explosion has killed the robot at {", targetx, ", ", targety, "} \n") ;
 										kills += 1;
 									}
 								}
@@ -330,7 +335,7 @@ public:
     void operate() override {
         if (detect){
             gameMap->destroyElem(detectPos[0], detectPos[1]);
-			cout << name << " has terminated robot at "<< detectPos[0] << "," << detectPos[1] << endl;
+			print( name, " has terminated robot at ", detectPos[0], ",", detectPos[1],"\n");
 			kills += 1;
             gameMap->changecoords(index, detectPos);
             pos[0] = detectPos[0];
@@ -388,7 +393,7 @@ public:
 			detectPos[1] = targety;
 			pos[0] = targetx;
 			pos[1] = targety;
-			cout << name << " set pos to " <<pos[0] << ", "<< pos[1]<<endl;
+			print( name, " set pos to ", pos[0], ", ", pos[1],"\n");
 			gameMap->changecoords(index, pos);
 		}
     }

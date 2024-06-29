@@ -1,5 +1,6 @@
 #include "battlefield.h"
 #include "robot.h"
+#include "print.h"
 
 #include <conio.h>
 #include <iostream>
@@ -10,24 +11,46 @@
 #include <time.h>
 using namespace std;
 
+ofstream resultfile("result.txt"); //global
+
 void endgame(string name){
-	cout << "GAME ENDED! THE WINNER IS " << name << "!" <<endl;
+	print("GAME ENDED! THE WINNER IS ",name,"!\n");
+	resultfile.close();
 	exit(0);
 }
+
 
 int main(){
 	int option;
 	bool temp = 0;
 	battlefield game = battlefield();
+	int buttonpressed = 0;
 	while (!temp){
 		temp = 1;
-		cout << "Select an Option: \n1) Manual setup\n2) Setup through file (requires a txt file with proper format)\n Option: ";
+		cout << "Select an Option: \n1) Manual setup\n2) File Setup\n3) Help \n\nOption: ";
 		cin >> option;
 		if (option == 1){
 			game.manualcreate();
 		
 		} else if (option == 2){
 			game.accessfile();
+		} else if (option == 3){
+			cout << "\n----------------FAQ-----------------\n\nFAQ: Why is the file not running/found?" << endl;
+			cout << "ANS: Double check to make sure the file is in the 'Inputs' folder which is in the same location as this program" <<endl << endl;
+			
+			cout << "FAQ: Why does the file may suddenly crash during program?" << endl;
+			cout << "ANS: Make sure the width M is more than 3 and less than 13 and Height N is more than 3 and less than 30\n\n\n----------------END-----------------\n\nPress Enter to continue...\n\n" <<endl;
+			temp = 0;
+			cin.clear();
+			cin.ignore(10000,'\n');
+			buttonpressed = getch();
+			if (buttonpressed == 0 || buttonpressed == 224)
+			{
+				getch();
+			}
+			else if (buttonpressed == 27)
+			{}
+			
 		} else {
 			temp = 0;
 			cin.clear();
@@ -37,7 +60,6 @@ int main(){
 
     //----------------------------Game Loop----------------------------------------------
     int gc = 0;
-    int buttonpressed = 0;
 	int robotsleft = game.get_elem_list_size();
 	
     // counting length of elem_list to initialize battlefield
@@ -79,19 +101,24 @@ int main(){
 				robot_list[i] = new ExplodoBot(&game, "Explodobot", game.getX(i), game.getY(i), i);
 			}
     }
-    cout << "Finished instantiating robots!\n\nOriginal Presets: \n";
+    print("Finished instantiating robots!\n\nOriginal Presets: \n");
 	game.printmap();
     game.logallelem();
 	game.printlogs();
     while (1)
     {
         gc++;
-        cout << endl
-             << endl;
-        cout << "--------------------------------------------------------------------------------------------" << endl;
-        cout << "Turn " << gc << endl
-             << endl;
-
+		if (gc >= game.get_steps()){
+			print("Game Finished. Max Steps Reached!");
+			resultfile.close();
+			exit(0);
+		}
+        print("\n\n");
+        print("--------------------------------------------------------------------------------------------\n");
+        print("Turn ");
+		print(gc);
+		print("\n\n");
+		
 		for (int i = 0; i < game.get_elem_list_size(); i++){
 			if (game.checkrevive(i) == 1){
 				game.revive(i);
@@ -99,8 +126,8 @@ int main(){
 					robotsleft -= 1;
 				}
 				if (game.checklives(i) != 0){
-					cout << game.elem_list[i] << " is revived at " << game.getX(i) << "," << game.getY(i) << "!" << endl;
-					cout << "Lives left: " << game.checklives(i) << endl << endl;
+					print(game.elem_list[i]," is revived at ",game.getX(i),",",game.getY(i),"!\n");
+					print("Lives left: ",game.checklives(i),"\n\n");
 					robot_list[i]->refreshpos(game.getX(i),game.getY(i));
 				}
 
@@ -114,7 +141,8 @@ int main(){
 					}
 				}
 			} else {
-				cout << "BAD ENDING! No Robots left...." << endl;
+				print("BAD ENDING! No Robots left....\n");
+				resultfile.close();
 				exit(0);
 			}
 		}
@@ -125,9 +153,9 @@ int main(){
         {	
 			if (game.checkrevive(i) == 0){
 				robot_list[i]->operate();
-				cout << endl;
+				print("\n");
 				if (robot_list[i]->checkkills() >= 3){
-					cout << robot_list[i]->showname() ;
+					print(robot_list[i]->showname()) ;
 					if (game.elem_list[i] == 'R'||game.elem_list[i] == 'T'){
 						game.change_elem_list(i,'A');
 						robot_list[i] = new TerminatorRoboCop(&game, "TerminatorRoboCop", game.getX(i), game.getY(i), i);
@@ -141,7 +169,7 @@ int main(){
 						game.change_elem_list(i,'E');
 						robot_list[i] = new RoboTank(&game, "RoboTank", game.getX(i), game.getY(i), i);							
 					}
-					cout << " has become " << robot_list[i]->showname() << endl;
+					print(" has become ",robot_list[i]->showname(),"\n");
 				}
 			}
         }
@@ -149,7 +177,7 @@ int main(){
         game.printmap();
         game.logallelem();
         game.printlogs();
-        int buttonpressed = getch();
+        buttonpressed = getch();
         if (buttonpressed == 0 || buttonpressed == 224)
         {
             getch();
