@@ -9,6 +9,8 @@
 #include <sstream>
 #include <cstdlib>
 #include <stdlib.h>
+#include <algorithm>
+#include <cctype>
 #include <time.h> 
 using namespace std;
 
@@ -27,7 +29,7 @@ class mapper {
 		}
 		T2 get(T1 x){
 			for (int i = 0; i < Arraysize; i++){
-				if (arrayAptr[i] == x){
+				if (lowercase(arrayAptr[i]) == lowercase(x)){
 					return arrayBptr[i];
 				}
 			}
@@ -35,11 +37,15 @@ class mapper {
 		}
 		T1 get(T2 x){
 			for (int i = 0; i < Arraysize; i++){
-				if (arrayBptr[i] == x){
+				if (lowercase(arrayAptr[i]) == lowercase(x)){
 					return arrayAptr[i];
 				}
 			}
 			throw std::logic_error(string("Array A Key not found")) ;
+		}
+		string lowercase(string a){
+			transform(a.begin(), a.end(), a.begin(),[](unsigned char c){ return tolower(c); });
+			return a;
 		}
 };
 
