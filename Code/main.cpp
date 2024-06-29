@@ -10,6 +10,11 @@
 #include <time.h>
 using namespace std;
 
+void endgame(string name){
+	cout << "GAME ENDED! THE WINNER IS " << name << "!" <<endl;
+	exit(0);
+}
+
 int main(){
 	int option;
 	bool temp = 0;
@@ -33,6 +38,7 @@ int main(){
     //----------------------------Game Loop----------------------------------------------
     int gc = 0;
     int buttonpressed = 0;
+	int robotsleft = game.get_elem_list_size();
 	
     // counting length of elem_list to initialize battlefield
     int count = 0; // Count for instantiating robots
@@ -52,6 +58,26 @@ int main(){
 			{
 				robot_list[i] = new BlueThunder(&game, "BlueThunder", game.getX(i), game.getY(i), i);
 			} 
+			else if (game.elem_list[i] == 'A')
+			{	
+				robot_list[i] = new TerminatorRoboCop(&game, "TerminatorRoboCop", game.getX(i), game.getY(i), i);
+			}
+			else if (game.elem_list[i] == 'M')
+			{
+				robot_list[i] = new Madbot(&game, "Madbot", game.getX(i), game.getY(i), i);
+			} 
+			else if (game.elem_list[i] == 'E')
+			{	
+				robot_list[i] = new RoboTank(&game, "RoboTank", game.getX(i), game.getY(i), i);
+			}
+			else if (game.elem_list[i] == 'U')
+			{
+				robot_list[i] = new UltimateRobot(&game, "UltimateRobot", game.getX(i), game.getY(i), i);
+			} 
+			else if (game.elem_list[i] == 'X')
+			{
+				robot_list[i] = new ExplodoBot(&game, "Explodobot", game.getX(i), game.getY(i), i);
+			}
     }
     cout << "Finished instantiating robots!\n\nOriginal Presets: \n";
 	game.printmap();
@@ -69,15 +95,32 @@ int main(){
 		for (int i = 0; i < game.get_elem_list_size(); i++){
 			if (game.checkrevive(i) == 1){
 				game.revive(i);
+				if (game.checklives(i) == 0){
+					robotsleft -= 1;
+				}
 				if (game.checklives(i) != 0){
 					cout << game.elem_list[i] << " is revived at " << game.getX(i) << "," << game.getY(i) << "!" << endl;
 					cout << "Lives left: " << game.checklives(i) << endl << endl;
 					robot_list[i]->refreshpos(game.getX(i),game.getY(i));
 				}
+
 			}
 		}
-	string all_robot_types[7] = {"RoboCop","Terminator","BlueThunder","TerminatorRoboCop","Madbot","RoboTank","UltimateRobot"};
-	char all_robot_symbol[7] = {'R','T','B','A','M','E','U'};
+		if (robotsleft <= 1){
+			if (robotsleft == 1){
+				for (int i = 0; i < game.get_elem_list_size(); i++){
+					if (game.checklives(i) != 0){
+						endgame(game.get_name(i));
+					}
+				}
+			} else {
+				cout << "BAD ENDING! No Robots left...." << endl;
+				exit(0);
+			}
+		}
+		robotsleft = game.get_elem_list_size();
+
+		
         for (int i = 0; i < game.get_elem_list_size(); i++)
         {	
 			if (game.checkrevive(i) == 0){
@@ -87,8 +130,8 @@ int main(){
 					cout << robot_list[i]->showname() ;
 					if (game.elem_list[i] == 'R'||game.elem_list[i] == 'T'){
 						game.change_elem_list(i,'A');
-						robot_list[i] = new TerminatorRoboCop(&game, "TerminatorRobocop", game.getX(i), game.getY(i), i);
-					} else if (game.elem_list[i] == 'A'||game.elem_list[i] == 'E'){
+						robot_list[i] = new TerminatorRoboCop(&game, "TerminatorRoboCop", game.getX(i), game.getY(i), i);
+					} else if (game.elem_list[i] == 'A'||game.elem_list[i] == 'E'||game.elem_list[i] == 'X'){
 						game.change_elem_list(i,'U');
 						robot_list[i] = new UltimateRobot(&game, "UltimateRobot", game.getX(i), game.getY(i), i);						
 					} else if (game.elem_list[i] == 'B'){
@@ -102,7 +145,6 @@ int main(){
 				}
 			}
         }
-		
         // Testing end
         game.printmap();
         game.logallelem();

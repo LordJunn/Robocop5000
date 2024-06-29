@@ -64,10 +64,10 @@ protected:
     string logs; // Logs
     string mapstring; // used to print the map
 	
-	string all_robot_types[7] = {"RoboCop","Terminator","BlueThunder","TerminatorRoboCop","Madbot","RoboTank","UltimateRobot"};
-	char all_robot_symbol[7] = {'R','T','B','A','M','E','U'};
+	string all_robot_types[8] = {"RoboCop","Terminator","BlueThunder","ExplodoBot","TerminatorRoboCop","Madbot","RoboTank","UltimateRobot"};
+	char all_robot_symbol[8] = {'R','T','B','X','A','M','E','U'};
 	
-	mapper<string,char> all_robot_symbol_type_map = mapper<string,char>(all_robot_types,all_robot_symbol,7);
+	mapper<string,char> all_robot_symbol_type_map = mapper<string,char>(all_robot_types,all_robot_symbol,8);
 
 public:
     char* elem_list; // List of all types of robots
@@ -138,9 +138,10 @@ public:
 	void accessfile();
 
     // Randomly places elements on the battlefield, ensuring no duplicate coordinates
-    void randomize(char* elem_list) {
+    void randomize(char* elem_list, string* elem_name_list) {
 	
         this->elem_list = elem_list;
+		this->elem_name_list = elem_name_list;
 
         // Initialize random engine and distribution
         srand(time(0));
@@ -226,17 +227,18 @@ public:
     // Prints the coordinates of all elements
     void logallelem() {
         for (int i = 0; i < elem_list_size; i++) {
-            logs += "Element ";
-            logs += elem_list[i];
-            logs += " is at {";
-			if (coordinates[i][0] != -99){
-				logs += to_string(coordinates[i][0]);
-				logs += ", ";
-				logs += to_string(coordinates[i][1]);
-			} else {
-				logs += "HEAVEN";
+            if (revivecount[i] > 0){
+				logs += elem_name_list[i];
+				if (coordinates[i][0] != -99){
+					logs += " is at {";
+					logs += to_string(coordinates[i][0]);
+					logs += ", ";
+					logs += to_string(coordinates[i][1]);
+					logs += "}\n";
+				} else {
+					logs += " is temporary dead\n";
+				}
 			}
-            logs += "}\n";
         }
     }
 
@@ -346,6 +348,10 @@ public:
 	void change_elem_list(int i, char x){
 		elem_list[i] = x;
 	}
+
+	string get_name(int i){
+		return elem_name_list[i];
+	}
 };
 
 void battlefield::manualcreate(){
@@ -372,13 +378,13 @@ void battlefield::manualcreate(){
 	}
 
 	char temp_elem_list[max_robot_limit] = {};
-
+	string temp_elem_name_list[max_robot_limit] = {};
 	//----------------------Objects Selector--------------------------------
 	cout << "Initializing map..." << endl;
 	cout << "You have selected a " <<x_axis<<" x " << y_axis <<" map" <<endl;
 	cout << "Select troops to march on an epic battle! Due to your battlefield size, you are limited to " << max_robot_limit <<" robots." << endl;
 	int total_robot_count =0, this_robot_count = 0;
-	for (int i = 0; i < 3; i++){ 
+	for (int i = 0; i < 4; i++){ 
 		cout << "How many " << all_robot_types[i] << "?" << endl;
 		cin >> this_robot_count;
 		total_robot_count += this_robot_count;
@@ -391,7 +397,8 @@ void battlefield::manualcreate(){
 		for (int k = 0; k < this_robot_count; k++){
 			for (int j=0;j < max_robot_limit;j++){
 				if (temp_elem_list[j] == '\0'){
-					temp_elem_list[j] = all_robot_symbol_type_map.get(all_robot_types[i]);
+					temp_elem_list[j] = all_robot_symbol[i];
+					temp_elem_name_list[j] = all_robot_types[i];
 					break;
 				}
 			}
@@ -407,18 +414,21 @@ void battlefield::manualcreate(){
 		if (each != '\0'){
 			count+=1;
 		}
-	}
+	} 
 
 	elem_list = new char[count];
+	elem_name_list = new string[count];
 	for (int x = 0; x < count ; x++){
 		elem_list[x] = temp_elem_list[x];
+		elem_name_list[x] =  temp_elem_name_list[x];
 	}
 	initialize_map();
 	initialize_size_n_coords(count);
-	randomize(elem_list);
+	randomize(elem_list, elem_name_list);
 	setup();
 
 }
+
 void battlefield::accessfile(){
 	string filename;
 

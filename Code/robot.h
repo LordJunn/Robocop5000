@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <stdlib.h>
 #include <time.h>
+// Base abstract class for all robots
 class Robot {
 protected:
     battlefield* gameMap;
@@ -55,7 +56,7 @@ public:
         {
             for (int j = pos[1] - 1; j <= pos[1] + 1; j++)
             {
-                if (j < 0 || j >= gameMap->getWidth() || i < 0 || i >= gameMap->getHeight()){
+                if (j < 0 || j >= gameMap->getHeight() || i < 0 || i >= gameMap->getWidth()){
                     continue;
 				}
                 else if (i == pos[0] && j == pos[1])
@@ -91,7 +92,7 @@ public:
         do{
 			targetx = rand()% gameMap->getWidth();
 			targety = rand()% gameMap->getHeight();
-		} while((targetx == pos[0] && targety == pos[1])|| targetx+targety > 10);
+		} while((targetx == pos[0] && targety == pos[1])|| targetx + targety > 10);
         cout << name << " has shot {" << targetx << ", " << targety << "} " << endl;
 		if (gameMap->checkoccupied(targetx, targety))
 		{
@@ -178,7 +179,7 @@ public:
 		for (int i = pos[0] - 1; i <= pos[0] + 1; i++)
 		{
 			for (int j = pos[1] - 1; j <= pos[1] + 1; j++){
-				if (j < 0 || j >= gameMap->getWidth() || i < 0 || i >= gameMap->getHeight()){
+				if (j < 0 || j >= gameMap->getHeight() || i < 0 || i >= gameMap->getWidth()){
 					continue;
 				}
 				else if (i == pos[0] && j == pos[1])
@@ -260,10 +261,66 @@ public:
 		detectPos[1] = targety;
         pos[0] = targetx;
 		pos[1] = targety;
-		cout << "Set pos to " <<pos[0] << ", "<< pos[1]<<endl;
+		cout << name << " set pos to " <<pos[0] << ", "<< pos[1]<<endl;
         gameMap->changecoords(index, pos);
     }
 };
+
+class ExplodeRobot : virtual public Robot {
+public:
+    ExplodeRobot(battlefield* field, string name,int x, int y, int i) : Robot(field,name,x,y,i) {
+	}
+
+    void operate() override {
+		int targetx;
+		int targety;
+        for (int i = pos[0] - 1; i <= pos[0] + 1; i++)
+        {
+            for (int j = pos[1] - 1; j <= pos[1] + 1; j++)
+            {
+                if (j < 0 || j >= gameMap->getHeight() || i < 0 || i >= gameMap->getWidth()){
+                    continue;
+				}
+                else if (i == pos[0] && j == pos[1])
+                    continue;
+                else
+                {	
+                    if (gameMap->checkoccupied(i, j))
+                    {
+						cout << "Enemy detected. Self explode initiated!" << endl;
+						for (int i2 = pos[0] - 1; i2 <= pos[0] + 1; i2++)
+						{
+							for (int j2 = pos[1] - 1; j2 <= pos[1] + 1; j2++)
+							{
+								if (j2 < 0 || j2 >= gameMap->getHeight() || i2 < 0 || i2 >= gameMap->getWidth()){
+									continue;
+								}
+								else if (i2 == pos[0] && j2 == pos[1])
+									continue;
+								else
+								{	
+									targetx = i2;
+									targety = j2;
+									if (gameMap->checkoccupied(targetx, targety))
+									{
+										gameMap->destroyElem(targetx, targety);
+										gameMap->refresh();
+										cout << name <<"'s explosion has killed the robot at {" << targetx << ", " << targety << "} " << endl;
+										kills += 1;
+									}
+								}
+							}
+						}
+						gameMap->destroyElem(pos[0], pos[1]);
+						gameMap->refresh();
+						return;
+                    }
+                }
+            }
+        }
+    }
+};
+
 
 class SteppingRobot : virtual public Robot {
 public:
@@ -331,7 +388,7 @@ public:
 			detectPos[1] = targety;
 			pos[0] = targetx;
 			pos[1] = targety;
-			cout << "Set pos to " <<pos[0] << ", "<< pos[1]<<endl;
+			cout << name << " set pos to " <<pos[0] << ", "<< pos[1]<<endl;
 			gameMap->changecoords(index, pos);
 		}
     }
@@ -429,4 +486,16 @@ public:
         SteppingRobot::operate();
     }
 };
+
+class ExplodoBot : public MovingRobot, public ExplodeRobot {
+
+public:
+    ExplodoBot(battlefield* field, string name,int x, int y, int i) : Robot(field,name,x,y,i),MovingRobot(field,name,x,y,i),ExplodeRobot(field,name,x,y,i){}
+
+    void operate() override {
+		MovingRobot::operate();
+		ExplodeRobot::operate();
+    }
+};
+
 #endif
