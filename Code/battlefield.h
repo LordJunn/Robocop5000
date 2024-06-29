@@ -81,6 +81,8 @@ protected:
 	char all_robot_symbol[8] = {'R','T','B','X','A','M','E','U'};
 	
 	mapper<string,char> all_robot_symbol_type_map = mapper<string,char>(all_robot_types,all_robot_symbol,8);
+	
+	bool custom_name = 0;
 
 public:
     char* elem_list; // List of all types of robots
@@ -370,6 +372,10 @@ public:
 	string get_name(int i){
 		return elem_name_list[i];
 	}
+	
+	bool check_custom(){
+		return custom_name;
+	}
 };
 
 void battlefield::manualcreate(){
@@ -543,6 +549,7 @@ void battlefield::accessfile(){
 		
 	}
 	file.close();
+	custom_name = 1;
 	
 	setup();
 }

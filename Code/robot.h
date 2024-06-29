@@ -180,32 +180,41 @@ public:
 		int count = 0;
 		int targetx;
 		int targety;
-		random = rand()%8;
-		for (int i = pos[0] - 1; i <= pos[0] + 1; i++)
-		{
-			for (int j = pos[1] - 1; j <= pos[1] + 1; j++){
-				if (j < 0 || j >= gameMap->getHeight() || i < 0 || i >= gameMap->getWidth()){
-					continue;
-				}
-				else if (i == pos[0] && j == pos[1])
-					continue;
-				else {
-					if (count == random){
-						targetx = i;
-						targety = j;
-						print(name, " shoot at ", targetx, ",", targety,"\n");
-						if (gameMap->checkoccupied(targetx, targety))
-						{
-							gameMap->destroyElem(targetx, targety);
-							gameMap->refresh();
-							print(name," has killed the robot at {", targetx, ", ", targety, "} \n") ;
-							kills += 1;
-						}
-						break;
+		bool success = 0;
+		do{
+			random = rand()%8;
+			for (int i = pos[0] - 1; i <= pos[0] + 1; i++)
+			{
+				for (int j = pos[1] - 1; j <= pos[1] + 1; j++){
+					if (j < 0 || j >= gameMap->getHeight() || i < 0 || i >= gameMap->getWidth()){
+						continue;
 					}
-				}						
+					else if (i == pos[0] && j == pos[1])
+						continue;
+					else {
+						if (count == random){
+							targetx = i;
+							targety = j;
+							print(name, " shot at {", targetx, ",", targety,"}\n");
+							if (gameMap->checkoccupied(targetx, targety))
+							{
+								gameMap->destroyElem(targetx, targety);
+								gameMap->refresh();
+								print(name," has killed the robot at {", targetx, ", ", targety, "} \n") ;
+								kills += 1;
+							}
+							success = 1;
+							break;
+						}
+					}	
+					count++;
+				}
+				if (success == 1){
+					break;
+				}
 			}
-		}
+			count = 0;
+		} while (success != 1);
 	}
 };
 

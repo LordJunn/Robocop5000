@@ -70,35 +70,35 @@ int main(){
     {	
 			if (game.elem_list[i] == 'R')
 			{
-				robot_list[i] = new Robocop(&game, "Robocop", game.getX(i), game.getY(i), i);
+				robot_list[i] = new Robocop(&game, game.get_name(i), game.getX(i), game.getY(i), i);
 			}
 			else if (game.elem_list[i] == 'T')
 			{	
-				robot_list[i] = new Terminator(&game, "Terminator", game.getX(i), game.getY(i), i);
+				robot_list[i] = new Terminator(&game, game.get_name(i), game.getX(i), game.getY(i), i);
 			}
 			else if (game.elem_list[i] == 'B')
 			{
-				robot_list[i] = new BlueThunder(&game, "BlueThunder", game.getX(i), game.getY(i), i);
+				robot_list[i] = new BlueThunder(&game, game.get_name(i), game.getX(i), game.getY(i), i);
 			} 
 			else if (game.elem_list[i] == 'A')
 			{	
-				robot_list[i] = new TerminatorRoboCop(&game, "TerminatorRoboCop", game.getX(i), game.getY(i), i);
+				robot_list[i] = new TerminatorRoboCop(&game, game.get_name(i), game.getX(i), game.getY(i), i);
 			}
 			else if (game.elem_list[i] == 'M')
 			{
-				robot_list[i] = new Madbot(&game, "Madbot", game.getX(i), game.getY(i), i);
+				robot_list[i] = new Madbot(&game, game.get_name(i), game.getX(i), game.getY(i), i);
 			} 
 			else if (game.elem_list[i] == 'E')
 			{	
-				robot_list[i] = new RoboTank(&game, "RoboTank", game.getX(i), game.getY(i), i);
+				robot_list[i] = new RoboTank(&game, game.get_name(i), game.getX(i), game.getY(i), i);
 			}
 			else if (game.elem_list[i] == 'U')
 			{
-				robot_list[i] = new UltimateRobot(&game, "UltimateRobot", game.getX(i), game.getY(i), i);
+				robot_list[i] = new UltimateRobot(&game, game.get_name(i), game.getX(i), game.getY(i), i);
 			} 
 			else if (game.elem_list[i] == 'X')
 			{
-				robot_list[i] = new ExplodoBot(&game, "Explodobot", game.getX(i), game.getY(i), i);
+				robot_list[i] = new ExplodoBot(&game, game.get_name(i), game.getX(i), game.getY(i), i);
 			}
     }
     print("Finished instantiating robots!\n\nOriginal Presets: \n");
@@ -151,25 +151,47 @@ int main(){
 		
         for (int i = 0; i < game.get_elem_list_size(); i++)
         {	
+			string newname;
 			if (game.checkrevive(i) == 0){
 				robot_list[i]->operate();
 				print("\n");
 				if (robot_list[i]->checkkills() >= 3){
 					print(robot_list[i]->showname()) ;
+
 					if (game.elem_list[i] == 'R'||game.elem_list[i] == 'T'){
 						game.change_elem_list(i,'A');
-						robot_list[i] = new TerminatorRoboCop(&game, "TerminatorRoboCop", game.getX(i), game.getY(i), i);
+						newname = "TerminatorRoboCop";
+						if (game.check_custom() == 1){
+							robot_list[i] = new TerminatorRoboCop(&game, game.get_name(i), game.getX(i), game.getY(i), i);
+						} else {
+							robot_list[i] = new TerminatorRoboCop(&game, "TerminatorRoboCop", game.getX(i), game.getY(i), i);
+						}
 					} else if (game.elem_list[i] == 'A'||game.elem_list[i] == 'E'||game.elem_list[i] == 'X'){
 						game.change_elem_list(i,'U');
-						robot_list[i] = new UltimateRobot(&game, "UltimateRobot", game.getX(i), game.getY(i), i);						
+						newname = "UltimateRobot";
+						if (game.check_custom() == 1){
+							robot_list[i] = new UltimateRobot(&game, game.get_name(i), game.getX(i), game.getY(i), i);
+						} else {
+							robot_list[i] = new UltimateRobot(&game, "UltimateRobot", game.getX(i), game.getY(i), i);	
+						}				
 					} else if (game.elem_list[i] == 'B'){
 						game.change_elem_list(i,'M');
-						robot_list[i] = new Madbot(&game, "Madbot", game.getX(i), game.getY(i), i);						
+						newname = "Madbot";
+						if (game.check_custom() == 1){
+							robot_list[i] = new Madbot(&game, game.get_name(i), game.getX(i), game.getY(i), i);
+						} else {
+							robot_list[i] = new Madbot(&game, "Madbot", game.getX(i), game.getY(i), i);		
+						}						
 					} else if (game.elem_list[i] == 'M'){
 						game.change_elem_list(i,'E');
-						robot_list[i] = new RoboTank(&game, "RoboTank", game.getX(i), game.getY(i), i);							
+						newname = "RoboTank";
+						if (game.check_custom() == 1){
+							robot_list[i] = new RoboTank(&game, game.get_name(i), game.getX(i), game.getY(i), i);
+						} else {
+							robot_list[i] = robot_list[i] = new RoboTank(&game, "RoboTank", game.getX(i), game.getY(i), i);		
+						}							
 					}
-					print(" has become ",robot_list[i]->showname(),"\n");
+					print(" has become ",newname,"\n");
 				}
 			}
         }
