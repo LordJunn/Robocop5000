@@ -1,3 +1,38 @@
+/* *********************************************************************
+PROGRAM : main.cpp (battlefield)
+COURSE: OOPDS
+TRIMESTER: 2410
+LECTURE SESSION: TC1L
+TUTORIAL SESSION: TT2L
+GROUP: 3
+
+Member 1
+Name: Chee Rui
+ID: 1211112287
+
+Member 2
+Name: Andrew Wee Hong Jun
+ID: 1211108270
+
+Member 3
+Name: Mei Yong Peng
+ID: 1211109159
+
+Member 4
+Name: Low Junn Kit
+ID: 1211111305
+
+Member 5
+Name: Fong Kai Chun
+ID: 1211108430
+
+Member 6
+Name: Chan Ka Ken 
+ID: 1211109440
+
+********************************************************************* */
+
+
 #include "battlefield.h"
 #include "robot.h"
 #include "print.h"
@@ -35,11 +70,11 @@ int main(){
 		} else if (option == 2){
 			game.accessfile();
 		} else if (option == 3){
-			cout << "\n----------------FAQ-----------------\n\nFAQ: Why is the file not running/found?" << endl;
+			cout << "\n----------------FAQ-----------------\n\n---------For Access File only----------\n\nFAQ: Why is the file not running/found?" << endl;
 			cout << "ANS: Double check to make sure the file is in the 'Inputs' folder which is in the same location as this program" <<endl << endl;
 			
 			cout << "FAQ: Why does the file may suddenly crash during program?" << endl;
-			cout << "ANS: Make sure the width M is more than 3 and less than 13 and Height N is more than 3 and less than 30\n\n\n----------------END-----------------\n\nPress Enter to continue...\n\n" <<endl;
+			cout << "ANS: Make sure the width M is more than 3 and less than 13 and Height N is more than 3 and less than 30\n    Also make sure that random coordinates are placed below fixed coordinates\n\n\n----------------END-----------------\n\nPress Enter to continue...\n\n" <<endl;
 			temp = 0;
 			cin.clear();
 			cin.ignore(10000,'\n');

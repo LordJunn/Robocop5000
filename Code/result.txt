@@ -1,747 +1,3825 @@
 Finished instantiating robots!
 
 Original Presets: 
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   | M |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   | X |   |   |   | R |
-+---+---+---+---+---+---+---+
-|   |   |   | T |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   | E |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   | X |   |   |   |   | B |   |   |   | B |   |   |   |   |   |   |   | X |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | R |   | R |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 
-Kidd is at {3, 4}
-Jet is at {2, 1}
-Alpha is at {3, 2}
-Metagross is at {2, 3}
-Star is at {6, 3}
+RoboCop is at {4, 0}
+RoboCop is at {6, 0}
+Terminator is at {20, 4}
+Terminator is at {16, 4}
+BlueThunder is at {6, 3}
+BlueThunder is at {10, 3}
+ExplodoBot is at {18, 3}
+ExplodoBot is at {1, 3}
 
 
 --------------------------------------------------------------------------------------------
 Turn 1
 
-Kidd shot at {4,4}
+RoboCop set pos to 3, 0
+RoboCop has shot {10, 4} 
+RoboCop has shot {11, 1} 
+RoboCop has shot {6, 0} 
+RoboCop has killed the robot at {6, 0} 
 
-Jet has shot {5, 1} 
+Terminator is performing a look...
+Terminator set pos to 20, 3
 
-Alpha is performing a look...
-Alpha is at 3 2
-Target spotted at: 2,1
-Alpha has terminated robot at 2,1
+Terminator is performing a look...
+Terminator set pos to 15, 3
 
-Metagross set pos to 1, 4
+BlueThunder has shot {6, 4} 
 
-Star set pos to 5, 2
-Star has shot {0, 2} 
-Star has shot {6, 1} 
-Star has shot {5, 1} 
+BlueThunder has shot {10, 4} 
 
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   | X |   | M |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   | R |   |
-+---+---+---+---+---+---+---+
-|   |   | T |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
+ExplodoBot set pos to 17, 2
 
-Kidd is at {3, 4}
-Jet is temporary dead
-Alpha is at {2, 1}
-Metagross is at {1, 4}
-Star is at {5, 2}
+ExplodoBot set pos to 2, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   | B |   |   |   | B |   |   |   |   | T |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   | X |   |   |   |   |   |   |   |   |   |   |   |   |   |   | X |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   | R |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {3, 0}
+RoboCop is temporary dead
+Terminator is at {20, 3}
+Terminator is at {15, 3}
+BlueThunder is at {6, 3}
+BlueThunder is at {10, 3}
+ExplodoBot is at {17, 2}
+ExplodoBot is at {2, 2}
 
 
 --------------------------------------------------------------------------------------------
 Turn 2
 
-E is revived at 6,1!
+R is revived at 4,0!
 Lives left: 2
 
-Kidd shot at {3,3}
+RoboCop set pos to 2, 1
+RoboCop has shot {2, 3} 
+RoboCop has shot {10, 3} 
+RoboCop has killed the robot at {10, 3} 
+RoboCop has shot {10, 0} 
 
-Jet has shot {6, 6} 
+RoboCop set pos to 3, 0
+RoboCop has shot {0, 3} 
+RoboCop has shot {11, 3} 
+RoboCop has shot {10, 4} 
 
-Alpha is performing a look...
-Alpha set pos to 3, 1
+Terminator is performing a look...
+Terminator set pos to 21, 2
 
-Metagross set pos to 0, 5
+Terminator is performing a look...
+Terminator set pos to 16, 2
 
-Star set pos to 4, 3
-Star has shot {3, 1} 
-Star has killed the robot at {3, 1} 
-Star has shot {5, 6} 
-Star has shot {5, 4} 
+BlueThunder has shot {7, 4} 
 
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-| X |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   | M |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   | R |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   | E |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
+ExplodoBot set pos to 18, 2
 
-Kidd is at {3, 4}
-Jet is at {6, 1}
-Alpha is temporary dead
-Metagross is at {0, 5}
-Star is at {4, 3}
+ExplodoBot set pos to 1, 2
+Enemy detected. Self explode initiated!
+ExplodoBot's explosion has killed the robot at {2, 1} 
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   | B |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   | X |   |   | T |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   | R |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is temporary dead
+RoboCop is at {3, 0}
+Terminator is at {21, 2}
+Terminator is at {16, 2}
+BlueThunder is at {6, 3}
+BlueThunder is temporary dead
+ExplodoBot is at {18, 2}
+ExplodoBot is temporary dead
 
 
 --------------------------------------------------------------------------------------------
 Turn 3
 
-T is revived at 6,7!
+R is revived at 9,3!
 Lives left: 2
 
-Kidd shot at {4,5}
+B is revived at 5,2!
+Lives left: 2
 
-Jet has shot {5, 3} 
+X is revived at 16,3!
+Lives left: 2
 
-Alpha is performing a look...
-Alpha set pos to 6, 6
+RoboCop set pos to 10, 3
+RoboCop has shot {19, 3} 
+RoboCop has shot {8, 1} 
+RoboCop has shot {17, 2} 
 
-Metagross set pos to 1, 6
+RoboCop set pos to 2, 1
+RoboCop has shot {3, 4} 
+RoboCop has shot {3, 0} 
+RoboCop has shot {4, 2} 
 
-Star set pos to 4, 4
-Star has shot {5, 3} 
-Star has shot {4, 6} 
-Star has shot {3, 3} 
+Terminator is performing a look...
+Terminator set pos to 20, 3
 
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   | X |   |   |   |   | T |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   | M | R |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   | E |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
+Terminator is performing a look...
+Terminator is at 16 2
+Target spotted at: 16,3
+Terminator has terminated robot at 16,3
 
-Kidd is at {3, 4}
-Jet is at {6, 1}
-Alpha is at {6, 6}
-Metagross is at {1, 6}
-Star is at {4, 4}
+BlueThunder has shot {7, 3} 
+
+BlueThunder has shot {6, 3} 
+BlueThunder has killed the robot at {6, 3} 
+
+ExplodoBot set pos to 18, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   | R |   |   |   |   |   | T |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   | B |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   | R |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | X |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {10, 3}
+RoboCop is at {2, 1}
+Terminator is at {20, 3}
+Terminator is at {16, 3}
+BlueThunder is temporary dead
+BlueThunder is at {5, 2}
+ExplodoBot is at {18, 1}
+ExplodoBot is temporary dead
 
 
 --------------------------------------------------------------------------------------------
 Turn 4
 
-Kidd shot at {2,5}
+B is revived at 17,4!
+Lives left: 2
 
-Jet has shot {2, 1} 
+X is revived at 19,1!
+Lives left: 1
 
-Alpha is performing a look...
-Alpha set pos to 6, 7
+RoboCop set pos to 10, 2
+RoboCop has shot {11, 1} 
+RoboCop has shot {13, 3} 
+RoboCop has shot {16, 1} 
 
-Metagross set pos to 2, 7
+RoboCop set pos to 2, 0
+RoboCop has shot {7, 2} 
+RoboCop has shot {10, 0} 
+RoboCop has shot {7, 1} 
 
-Star set pos to 5, 3
-Star has shot {1, 4} 
-Star has shot {4, 4} 
-Star has shot {0, 5} 
+Terminator is performing a look...
+Terminator set pos to 19, 2
 
-+---+---+---+---+---+---+---+
-|   |   | X |   |   |   | T |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   | M |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   | R |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   | E |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
+Terminator is performing a look...
+Terminator is at 16 3
+Target spotted at: 17,4
+Terminator has terminated robot at 17,4
 
-Kidd is at {3, 4}
-Jet is at {6, 1}
-Alpha is at {6, 7}
-Metagross is at {2, 7}
-Star is at {5, 3}
+BlueThunder has shot {6, 2} 
+
+ExplodoBot set pos to 17, 0
+
+ExplodoBot set pos to 18, 2
+Enemy detected. Self explode initiated!
+ExplodoBot's explosion has killed the robot at {19, 2} 
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   | B |   |   |   |   | R |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   | R |   |   |   |   |   |   |   |   |   |   |   |   |   |   | X |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {10, 2}
+RoboCop is at {2, 0}
+Terminator is temporary dead
+Terminator is at {17, 4}
+BlueThunder is temporary dead
+BlueThunder is at {5, 2}
+ExplodoBot is at {17, 0}
 
 
 --------------------------------------------------------------------------------------------
 Turn 5
 
-Kidd shot at {4,3}
+T is revived at 8,3!
+Lives left: 2
 
-Jet has shot {0, 3} 
+B is revived at 21,2!
+Lives left: 1
 
-Alpha is performing a look...
-Alpha set pos to 5, 7
+RoboCop set pos to 9, 1
+RoboCop has shot {14, 0} 
+RoboCop has shot {16, 2} 
+RoboCop has shot {8, 1} 
 
-Metagross set pos to 2, 6
+RoboCop set pos to 2, 1
+RoboCop has shot {6, 4} 
+RoboCop has shot {5, 2} 
+RoboCop has killed the robot at {5, 2} 
+RoboCop has shot {5, 1} 
 
-Star set pos to 4, 4
-Star has shot {4, 6} 
-Star has shot {1, 0} 
-Star has shot {6, 0} 
+Terminator is performing a look...
+Terminator set pos to 7, 4
 
-+---+---+---+---+---+---+---+
-|   |   |   |   |   | T |   |
-+---+---+---+---+---+---+---+
-|   |   | X |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   | M | R |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   | E |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
+Terminator is performing a look...
+Terminator set pos to 18, 4
 
-Kidd is at {3, 4}
-Jet is at {6, 1}
-Alpha is at {5, 7}
-Metagross is at {2, 6}
-Star is at {4, 4}
+BlueThunder has shot {21, 1} 
+
+ExplodoBot set pos to 18, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   | T |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | B |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   | R |   |   |   |   |   |   | R |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | X |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {9, 1}
+RoboCop is at {2, 1}
+Terminator is at {7, 4}
+Terminator is at {18, 4}
+BlueThunder is at {21, 2}
+BlueThunder is temporary dead
+ExplodoBot is at {18, 0}
 
 
 --------------------------------------------------------------------------------------------
 Turn 6
 
-Kidd shot at {4,4}
-Kidd has killed the robot at {4, 4} 
+B is revived at 7,3!
+Lives left: 1
 
-Jet has shot {0, 0} 
+RoboCop set pos to 8, 2
+RoboCop has shot {15, 4} 
+RoboCop has shot {9, 2} 
+RoboCop has shot {14, 1} 
 
-Alpha is performing a look...
-Alpha set pos to 4, 6
+RoboCop set pos to 1, 1
+RoboCop has shot {8, 2} 
+RoboCop has killed the robot at {8, 2} 
+RoboCop has shot {8, 0} 
+RoboCop has shot {9, 0} 
 
-Metagross set pos to 3, 7
-Enemy detected. Self explode initiated!
-Metagross's explosion has killed the robot at {4, 6} 
+Terminator is performing a look...
+Terminator is at 7 4
+Target spotted at: 7,3
+Terminator has terminated robot at 7,3
 
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   | M |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   | E |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
+Terminator is performing a look...
+Terminator set pos to 18, 3
 
-Kidd is at {3, 4}
-Jet is at {6, 1}
-Alpha is temporary dead
-Metagross is temporary dead
-Star is temporary dead
+BlueThunder has shot {20, 1} 
+
+ExplodoBot set pos to 19, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   | T |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | B |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   | R |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | X |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is temporary dead
+RoboCop is at {1, 1}
+Terminator is at {7, 3}
+Terminator is at {18, 3}
+BlueThunder is at {21, 2}
+ExplodoBot is at {19, 0}
 
 
 --------------------------------------------------------------------------------------------
 Turn 7
 
-T is revived at 0,1!
+R is revived at 21,0!
 Lives left: 1
 
-X is revived at 3,6!
-Lives left: 2
+RoboCop set pos to 20, 1
+RoboCop has shot {19, 0} 
+RoboCop has killed the robot at {19, 0} 
+RoboCop has shot {14, 1} 
+RoboCop has shot {16, 1} 
 
-R is revived at 5,5!
-Lives left: 2
+RoboCop has become TerminatorRoboCop
+RoboCop set pos to 0, 1
+RoboCop has shot {2, 2} 
+RoboCop has shot {2, 3} 
+RoboCop has shot {0, 2} 
 
-Kidd shot at {2,4}
+Terminator is performing a look...
+Terminator set pos to 8, 4
 
-Jet has shot {6, 5} 
+Terminator is performing a look...
+Terminator set pos to 19, 4
 
-Alpha is performing a look...
-Alpha set pos to 1, 0
+BlueThunder has shot {20, 2} 
 
-Metagross set pos to 2, 7
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   | T |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | B |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| R |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 
-Star set pos to 5, 4
-Star has shot {3, 0} 
-Star has shot {3, 0} 
-Star has shot {1, 4} 
-
-+---+---+---+---+---+---+---+
-|   |   | X |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   | M |   | R |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   | E |
-+---+---+---+---+---+---+---+
-|   | T |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-
-Kidd is at {3, 4}
-Jet is at {6, 1}
-Alpha is at {1, 0}
-Metagross is at {2, 7}
-Star is at {5, 4}
+RoboCop is at {20, 1}
+RoboCop is at {0, 1}
+Terminator is at {8, 4}
+Terminator is at {19, 4}
+BlueThunder is at {21, 2}
+ExplodoBot is temporary dead
 
 
 --------------------------------------------------------------------------------------------
 Turn 8
 
-Kidd shot at {2,3}
+X is revived at 5,4!
+Lives left: 2
 
-Jet has shot {1, 2} 
+TerminatorRoboCop has shot {21, 4} 
+TerminatorRoboCop has shot {21, 3} 
+TerminatorRoboCop has shot {13, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop is at 20 1
+Target spotted at: 21,2
+TerminatorRoboCop has terminated robot at 21,2
 
-Alpha is performing a look...
-Alpha set pos to 2, 0
+RoboCop set pos to 1, 0
+RoboCop has shot {3, 1} 
+RoboCop has shot {8, 1} 
+RoboCop has shot {3, 1} 
 
-Metagross set pos to 1, 7
+Terminator is performing a look...
+Terminator set pos to 7, 4
 
-Star set pos to 5, 3
-Star has shot {4, 2} 
-Star has shot {4, 5} 
-Star has shot {3, 3} 
+Terminator is performing a look...
+Terminator set pos to 18, 3
 
-+---+---+---+---+---+---+---+
-|   | X |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   | M |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   | R |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   | E |
-+---+---+---+---+---+---+---+
-|   |   | T |   |   |   |   |
-+---+---+---+---+---+---+---+
+ExplodoBot set pos to 4, 3
 
-Kidd is at {3, 4}
-Jet is at {6, 1}
-Alpha is at {2, 0}
-Metagross is at {1, 7}
-Star is at {5, 3}
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | X |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   | R |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {21, 2}
+RoboCop is at {1, 0}
+Terminator is at {7, 4}
+Terminator is at {18, 3}
+ExplodoBot is at {4, 3}
 
 
 --------------------------------------------------------------------------------------------
 Turn 9
 
-Kidd shot at {4,5}
+TerminatorRoboCop has shot {18, 2} 
+TerminatorRoboCop has shot {21, 3} 
+TerminatorRoboCop has shot {15, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 20, 2
 
-Jet has shot {6, 0} 
+RoboCop set pos to 2, 0
+RoboCop has shot {8, 3} 
+RoboCop has shot {1, 2} 
+RoboCop has shot {0, 0} 
 
-Alpha is performing a look...
-Alpha set pos to 1, 0
+Terminator is performing a look...
+Terminator set pos to 6, 3
 
-Metagross set pos to 1, 6
+Terminator is performing a look...
+Terminator set pos to 17, 3
 
-Star set pos to 4, 3
-Star has shot {0, 5} 
-Star has shot {3, 4} 
-Star has killed the robot at {3, 4} 
-Star has shot {4, 6} 
+ExplodoBot set pos to 4, 4
 
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   | X |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   | R |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   | E |
-+---+---+---+---+---+---+---+
-|   | T |   |   |   |   |   |
-+---+---+---+---+---+---+---+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | X |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   | R |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 
-Kidd is temporary dead
-Jet is at {6, 1}
-Alpha is at {1, 0}
-Metagross is at {1, 6}
-Star is at {4, 3}
+RoboCop is at {20, 2}
+RoboCop is at {2, 0}
+Terminator is at {6, 3}
+Terminator is at {17, 3}
+ExplodoBot is at {4, 4}
 
 
 --------------------------------------------------------------------------------------------
 Turn 10
 
-M is revived at 5,1!
-Lives left: 2
+TerminatorRoboCop has shot {20, 1} 
+TerminatorRoboCop has shot {15, 2} 
+TerminatorRoboCop has shot {21, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 21, 1
 
-Kidd shot at {6,0}
+RoboCop set pos to 3, 0
+RoboCop has shot {5, 4} 
+RoboCop has shot {5, 2} 
+RoboCop has shot {6, 1} 
 
-Jet has shot {1, 0} 
-Jet has killed the robot at {1, 0} 
+Terminator is performing a look...
+Terminator set pos to 6, 2
 
-Metagross set pos to 1, 5
+Terminator is performing a look...
+Terminator set pos to 18, 2
 
-Star set pos to 4, 2
-Star has shot {5, 4} 
-Star has shot {4, 7} 
-Star has shot {2, 6} 
+ExplodoBot set pos to 5, 4
 
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   | X |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   | R |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   | M | E |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   | X |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   | R |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 
-Kidd is at {5, 1}
-Jet is at {6, 1}
-Metagross is at {1, 5}
-Star is at {4, 2}
+RoboCop is at {21, 1}
+RoboCop is at {3, 0}
+Terminator is at {6, 2}
+Terminator is at {18, 2}
+ExplodoBot is at {5, 4}
 
 
 --------------------------------------------------------------------------------------------
 Turn 11
 
-Kidd shot at {6,2}
+TerminatorRoboCop has shot {15, 2} 
+TerminatorRoboCop has shot {17, 3} 
+TerminatorRoboCop has shot {19, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 21, 0
 
-Jet has shot {5, 6} 
+RoboCop set pos to 4, 0
+RoboCop has shot {9, 1} 
+RoboCop has shot {4, 1} 
+RoboCop has shot {0, 4} 
 
-Metagross set pos to 0, 4
+Terminator is performing a look...
+Terminator set pos to 6, 1
 
-Star set pos to 5, 3
-Star has shot {3, 6} 
-Star has shot {0, 3} 
-Star has shot {0, 7} 
+Terminator is performing a look...
+Terminator set pos to 17, 2
 
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-| X |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   | R |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   | M | E |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
+ExplodoBot set pos to 4, 4
 
-Kidd is at {5, 1}
-Jet is at {6, 1}
-Metagross is at {0, 4}
-Star is at {5, 3}
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | X |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | R |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {21, 0}
+RoboCop is at {4, 0}
+Terminator is at {6, 1}
+Terminator is at {17, 2}
+ExplodoBot is at {4, 4}
 
 
 --------------------------------------------------------------------------------------------
 Turn 12
 
-Kidd shot at {4,1}
+TerminatorRoboCop has shot {14, 1} 
+TerminatorRoboCop has shot {12, 0} 
+TerminatorRoboCop has shot {18, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 20, 1
 
-Jet has shot {1, 7} 
+RoboCop set pos to 4, 1
+RoboCop has shot {8, 1} 
+RoboCop has shot {3, 0} 
+RoboCop has shot {11, 2} 
 
-Metagross set pos to 1, 3
+Terminator is performing a look...
+Terminator set pos to 7, 2
 
-Star set pos to 4, 3
-Star has shot {5, 1} 
-Star has killed the robot at {5, 1} 
-Star has shot {0, 5} 
-Star has shot {3, 6} 
+Terminator is performing a look...
+Terminator set pos to 16, 1
 
-Star has become TerminatorRoboCop
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   | X |   |   | R |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   | E |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
+ExplodoBot set pos to 3, 3
 
-Kidd is temporary dead
-Jet is at {6, 1}
-Metagross is at {1, 3}
-Star is at {4, 3}
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   | X |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | R |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   | A |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {20, 1}
+RoboCop is at {4, 1}
+Terminator is at {7, 2}
+Terminator is at {16, 1}
+ExplodoBot is at {3, 3}
 
 
 --------------------------------------------------------------------------------------------
 Turn 13
 
-M is revived at 5,2!
-Lives left: 1
+TerminatorRoboCop has shot {15, 0} 
+TerminatorRoboCop has shot {14, 2} 
+TerminatorRoboCop has shot {12, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 21, 2
 
-Kidd shot at {6,2}
+RoboCop set pos to 4, 0
+RoboCop has shot {3, 2} 
+RoboCop has shot {6, 3} 
+RoboCop has shot {6, 0} 
 
-Jet has shot {5, 0} 
+Terminator is performing a look...
+Terminator set pos to 7, 1
 
-Metagross set pos to 0, 4
+Terminator is performing a look...
+Terminator set pos to 16, 2
 
-Star has shot {6, 2} 
-Star has shot {3, 2} 
-Star has shot {3, 0} 
-Star is performing a look...
-Star is at 4 3
-Target spotted at: 5,2
-Star has terminated robot at 5,2
+ExplodoBot set pos to 4, 3
 
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-| X |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   | A |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   | E |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | X |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   | A |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | R |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 
-Jet is at {6, 1}
-Metagross is at {0, 4}
-Star is at {5, 2}
+RoboCop is at {21, 2}
+RoboCop is at {4, 0}
+Terminator is at {7, 1}
+Terminator is at {16, 2}
+ExplodoBot is at {4, 3}
 
 
 --------------------------------------------------------------------------------------------
 Turn 14
 
-Jet has shot {6, 4} 
+TerminatorRoboCop has shot {18, 3} 
+TerminatorRoboCop has shot {15, 4} 
+TerminatorRoboCop has shot {15, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 21, 1
 
-Metagross set pos to 1, 4
+RoboCop set pos to 3, 0
+RoboCop has shot {9, 0} 
+RoboCop has shot {4, 4} 
+RoboCop has shot {3, 2} 
 
-Star has shot {1, 1} 
-Star has shot {4, 6} 
-Star has shot {1, 4} 
-Star has killed the robot at {1, 4} 
-Star is performing a look...
-Star is at 5 2
-Target spotted at: 6,1
-Star has terminated robot at 6,1
+Terminator is performing a look...
+Terminator set pos to 8, 0
 
-Star has become UltimateRobot
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   | A |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
+Terminator is performing a look...
+Terminator set pos to 16, 3
 
-Jet is temporary dead
-Metagross is temporary dead
-Star is at {6, 1}
+ExplodoBot set pos to 3, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   | X |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   | R |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {21, 1}
+RoboCop is at {3, 0}
+Terminator is at {8, 0}
+Terminator is at {16, 3}
+ExplodoBot is at {3, 2}
 
 
 --------------------------------------------------------------------------------------------
 Turn 15
 
-E is revived at 1,4!
-Lives left: 1
+TerminatorRoboCop has shot {20, 3} 
+TerminatorRoboCop has shot {15, 4} 
+TerminatorRoboCop has shot {15, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 20, 0
 
-X is revived at 4,5!
-Lives left: 1
+RoboCop set pos to 4, 0
+RoboCop has shot {11, 3} 
+RoboCop has shot {9, 1} 
+RoboCop has shot {6, 3} 
 
-Jet has shot {6, 7} 
+Terminator is performing a look...
+Terminator set pos to 7, 1
 
-Metagross set pos to 3, 6
+Terminator is performing a look...
+Terminator set pos to 15, 4
 
-Star has shot {5, 1} 
-Star has shot {2, 5} 
-Star has shot {4, 2} 
-Star has shot {1, 4} 
-Star has killed the robot at {1, 4} 
-Star has shot {1, 7} 
-Star has shot {5, 0} 
-Star is performing a look...
-Star set pos to 6, 2
+ExplodoBot set pos to 4, 1
+Enemy detected. Self explode initiated!
+ExplodoBot's explosion has killed the robot at {4, 0} 
 
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   | X |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   | U |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 
-Metagross is at {3, 6}
-Star is at {6, 2}
+RoboCop is at {20, 0}
+RoboCop is temporary dead
+Terminator is at {7, 1}
+Terminator is at {15, 4}
+ExplodoBot is temporary dead
 
 
 --------------------------------------------------------------------------------------------
 Turn 16
 
-Metagross set pos to 4, 6
+R is revived at 19,4!
+Lives left: 1
 
-Star has shot {6, 5} 
-Star has shot {2, 1} 
-Star has shot {0, 2} 
-Star has shot {1, 0} 
-Star has shot {0, 3} 
-Star has shot {6, 1} 
-Star is performing a look...
-Star set pos to 5, 3
+X is revived at 16,2!
+Lives left: 1
 
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   | X |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   | U |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
+TerminatorRoboCop has shot {19, 1} 
+TerminatorRoboCop has shot {21, 1} 
+TerminatorRoboCop has shot {17, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 21, 1
 
-Metagross is at {4, 6}
-Star is at {5, 3}
+RoboCop set pos to 19, 3
+RoboCop has shot {11, 4} 
+RoboCop has shot {15, 2} 
+RoboCop has shot {15, 2} 
+
+Terminator is performing a look...
+Terminator set pos to 6, 1
+
+Terminator is performing a look...
+Terminator set pos to 16, 4
+
+ExplodoBot set pos to 17, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | R |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | X |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {21, 1}
+RoboCop is at {19, 3}
+Terminator is at {6, 1}
+Terminator is at {16, 4}
+ExplodoBot is at {17, 2}
 
 
 --------------------------------------------------------------------------------------------
 Turn 17
 
-Metagross set pos to 3, 5
+TerminatorRoboCop has shot {18, 0} 
+TerminatorRoboCop has shot {17, 1} 
+TerminatorRoboCop has shot {21, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 20, 2
 
-Star has shot {0, 0} 
-Star has shot {4, 4} 
-Star has shot {3, 5} 
-Star has killed the robot at {3, 5} 
-Star has shot {3, 5} 
-Star has shot {0, 3} 
-Star has shot {5, 2} 
-Star is performing a look...
-Star set pos to 6, 2
+RoboCop set pos to 18, 3
+RoboCop has shot {17, 2} 
+RoboCop has killed the robot at {17, 2} 
+RoboCop has shot {18, 0} 
+RoboCop has shot {19, 2} 
 
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   | U |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
+RoboCop has become TerminatorRoboCop
+Terminator is performing a look...
+Terminator set pos to 7, 1
 
-Star is at {6, 2}
+Terminator is performing a look...
+Terminator set pos to 15, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {20, 2}
+RoboCop is at {18, 3}
+Terminator is at {7, 1}
+Terminator is at {15, 4}
 
 
 --------------------------------------------------------------------------------------------
 Turn 18
 
-GAME ENDED! THE WINNER IS Star!
+TerminatorRoboCop has shot {13, 4} 
+TerminatorRoboCop has shot {15, 3} 
+TerminatorRoboCop has shot {18, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 21, 1
+
+TerminatorRoboCop has shot {21, 1} 
+TerminatorRoboCop has killed the robot at {21, 1} 
+TerminatorRoboCop has shot {11, 4} 
+TerminatorRoboCop has shot {11, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 18, 2
+
+Terminator is performing a look...
+Terminator set pos to 6, 0
+
+Terminator is performing a look...
+Terminator set pos to 14, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {18, 2}
+Terminator is at {6, 0}
+Terminator is at {14, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 19
+
+TerminatorRoboCop has shot {16, 3} 
+TerminatorRoboCop has shot {16, 2} 
+TerminatorRoboCop has shot {10, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 18, 1
+
+Terminator is performing a look...
+Terminator set pos to 5, 1
+
+Terminator is performing a look...
+Terminator set pos to 15, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {18, 1}
+Terminator is at {5, 1}
+Terminator is at {15, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 20
+
+TerminatorRoboCop has shot {20, 2} 
+TerminatorRoboCop has shot {12, 3} 
+TerminatorRoboCop has shot {20, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 17, 2
+
+Terminator is performing a look...
+Terminator set pos to 4, 2
+
+Terminator is performing a look...
+Terminator set pos to 14, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {17, 2}
+Terminator is at {4, 2}
+Terminator is at {14, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 21
+
+TerminatorRoboCop has shot {13, 4} 
+TerminatorRoboCop has shot {10, 1} 
+TerminatorRoboCop has shot {13, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 16, 3
+
+Terminator is performing a look...
+Terminator set pos to 3, 1
+
+Terminator is performing a look...
+Terminator set pos to 15, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {16, 3}
+Terminator is at {3, 1}
+Terminator is at {15, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 22
+
+TerminatorRoboCop has shot {16, 1} 
+TerminatorRoboCop has shot {18, 1} 
+TerminatorRoboCop has shot {18, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 15, 3
+
+Terminator is performing a look...
+Terminator set pos to 2, 0
+
+Terminator is performing a look...
+Terminator set pos to 16, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {15, 3}
+Terminator is at {2, 0}
+Terminator is at {16, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 23
+
+TerminatorRoboCop has shot {8, 3} 
+TerminatorRoboCop has shot {9, 0} 
+TerminatorRoboCop has shot {9, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 16, 3
+
+Terminator is performing a look...
+Terminator set pos to 3, 0
+
+Terminator is performing a look...
+Terminator set pos to 16, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {16, 3}
+Terminator is at {3, 0}
+Terminator is at {16, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 24
+
+TerminatorRoboCop has shot {8, 1} 
+TerminatorRoboCop has shot {19, 3} 
+TerminatorRoboCop has shot {19, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 17, 2
+
+Terminator is performing a look...
+Terminator set pos to 4, 0
+
+Terminator is performing a look...
+Terminator set pos to 15, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+RoboCop is at {17, 2}
+Terminator is at {4, 0}
+Terminator is at {15, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 25
+
+TerminatorRoboCop has shot {20, 3} 
+TerminatorRoboCop has shot {18, 4} 
+TerminatorRoboCop has shot {19, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 16, 2
+
+Terminator is performing a look...
+Terminator set pos to 3, 0
+
+Terminator is performing a look...
+Terminator is at 15 1
+Target spotted at: 16,2
+Terminator has terminated robot at 16,2
+
+Terminator has become TerminatorRoboCop
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {3, 0}
+Terminator is at {16, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 26
+
+Terminator is performing a look...
+Terminator set pos to 2, 0
+
+TerminatorRoboCop has shot {17, 0} 
+TerminatorRoboCop has shot {7, 2} 
+TerminatorRoboCop has shot {19, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 17, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {2, 0}
+Terminator is at {17, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 27
+
+Terminator is performing a look...
+Terminator set pos to 3, 0
+
+TerminatorRoboCop has shot {12, 3} 
+TerminatorRoboCop has shot {13, 0} 
+TerminatorRoboCop has shot {18, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 16, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {3, 0}
+Terminator is at {16, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 28
+
+Terminator is performing a look...
+Terminator set pos to 4, 0
+
+TerminatorRoboCop has shot {18, 2} 
+TerminatorRoboCop has shot {17, 0} 
+TerminatorRoboCop has shot {13, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 15, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {4, 0}
+Terminator is at {15, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 29
+
+Terminator is performing a look...
+Terminator set pos to 5, 1
+
+TerminatorRoboCop has shot {14, 0} 
+TerminatorRoboCop has shot {7, 2} 
+TerminatorRoboCop has shot {20, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 15, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {5, 1}
+Terminator is at {15, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 30
+
+Terminator is performing a look...
+Terminator set pos to 4, 0
+
+TerminatorRoboCop has shot {11, 2} 
+TerminatorRoboCop has shot {14, 3} 
+TerminatorRoboCop has shot {14, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 14, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {4, 0}
+Terminator is at {14, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 31
+
+Terminator is performing a look...
+Terminator set pos to 5, 0
+
+TerminatorRoboCop has shot {18, 1} 
+TerminatorRoboCop has shot {15, 3} 
+TerminatorRoboCop has shot {7, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 13, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {5, 0}
+Terminator is at {13, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 32
+
+Terminator is performing a look...
+Terminator set pos to 6, 1
+
+TerminatorRoboCop has shot {13, 4} 
+TerminatorRoboCop has shot {21, 4} 
+TerminatorRoboCop has shot {20, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 12, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {6, 1}
+Terminator is at {12, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 33
+
+Terminator is performing a look...
+Terminator set pos to 7, 1
+
+TerminatorRoboCop has shot {12, 3} 
+TerminatorRoboCop has shot {17, 1} 
+TerminatorRoboCop has shot {18, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 11, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {7, 1}
+Terminator is at {11, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 34
+
+Terminator is performing a look...
+Terminator set pos to 8, 0
+
+TerminatorRoboCop has shot {9, 0} 
+TerminatorRoboCop has shot {4, 2} 
+TerminatorRoboCop has shot {13, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 10, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {8, 0}
+Terminator is at {10, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 35
+
+Terminator is performing a look...
+Terminator set pos to 9, 0
+
+TerminatorRoboCop has shot {17, 2} 
+TerminatorRoboCop has shot {12, 1} 
+TerminatorRoboCop has shot {12, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop is at 10 1
+Target spotted at: 9,0
+TerminatorRoboCop has terminated robot at 9,0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is temporary dead
+Terminator is at {9, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 36
+
+T is revived at 14,1!
+Lives left: 1
+
+Terminator is performing a look...
+Terminator set pos to 15, 2
+
+TerminatorRoboCop has shot {4, 1} 
+TerminatorRoboCop has shot {16, 3} 
+TerminatorRoboCop has shot {12, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 10, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {15, 2}
+Terminator is at {10, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 37
+
+Terminator is performing a look...
+Terminator set pos to 16, 3
+
+TerminatorRoboCop has shot {17, 1} 
+TerminatorRoboCop has shot {7, 3} 
+TerminatorRoboCop has shot {1, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 9, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {16, 3}
+Terminator is at {9, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 38
+
+Terminator is performing a look...
+Terminator set pos to 15, 4
+
+TerminatorRoboCop has shot {2, 4} 
+TerminatorRoboCop has shot {3, 2} 
+TerminatorRoboCop has shot {8, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 9, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {15, 4}
+Terminator is at {9, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 39
+
+Terminator is performing a look...
+Terminator set pos to 16, 4
+
+TerminatorRoboCop has shot {4, 1} 
+TerminatorRoboCop has shot {2, 0} 
+TerminatorRoboCop has shot {18, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 10, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {16, 4}
+Terminator is at {10, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 40
+
+Terminator is performing a look...
+Terminator set pos to 17, 3
+
+TerminatorRoboCop has shot {14, 2} 
+TerminatorRoboCop has shot {8, 0} 
+TerminatorRoboCop has shot {9, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 10, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {17, 3}
+Terminator is at {10, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 41
+
+Terminator is performing a look...
+Terminator set pos to 16, 2
+
+TerminatorRoboCop has shot {5, 1} 
+TerminatorRoboCop has shot {11, 0} 
+TerminatorRoboCop has shot {15, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 10, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {16, 2}
+Terminator is at {10, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 42
+
+Terminator is performing a look...
+Terminator set pos to 16, 3
+
+TerminatorRoboCop has shot {16, 4} 
+TerminatorRoboCop has shot {18, 0} 
+TerminatorRoboCop has shot {17, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 9, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {16, 3}
+Terminator is at {9, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 43
+
+Terminator is performing a look...
+Terminator set pos to 17, 3
+
+TerminatorRoboCop has shot {15, 4} 
+TerminatorRoboCop has shot {6, 3} 
+TerminatorRoboCop has shot {4, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 9, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {17, 3}
+Terminator is at {9, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 44
+
+Terminator is performing a look...
+Terminator set pos to 18, 2
+
+TerminatorRoboCop has shot {9, 3} 
+TerminatorRoboCop has shot {8, 1} 
+TerminatorRoboCop has shot {17, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 8, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {18, 2}
+Terminator is at {8, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 45
+
+Terminator is performing a look...
+Terminator set pos to 19, 2
+
+TerminatorRoboCop has shot {3, 3} 
+TerminatorRoboCop has shot {4, 3} 
+TerminatorRoboCop has shot {6, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 8, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {19, 2}
+Terminator is at {8, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 46
+
+Terminator is performing a look...
+Terminator set pos to 19, 1
+
+TerminatorRoboCop has shot {12, 3} 
+TerminatorRoboCop has shot {11, 3} 
+TerminatorRoboCop has shot {12, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 7, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {19, 1}
+Terminator is at {7, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 47
+
+Terminator is performing a look...
+Terminator set pos to 19, 2
+
+TerminatorRoboCop has shot {15, 1} 
+TerminatorRoboCop has shot {13, 0} 
+TerminatorRoboCop has shot {13, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 8, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   | T |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {19, 2}
+Terminator is at {8, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 48
+
+Terminator is performing a look...
+Terminator set pos to 19, 3
+
+TerminatorRoboCop has shot {1, 1} 
+TerminatorRoboCop has shot {9, 1} 
+TerminatorRoboCop has shot {15, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 9, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {19, 3}
+Terminator is at {9, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 49
+
+Terminator is performing a look...
+Terminator set pos to 18, 4
+
+TerminatorRoboCop has shot {13, 0} 
+TerminatorRoboCop has shot {8, 4} 
+TerminatorRoboCop has shot {2, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 9, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {18, 4}
+Terminator is at {9, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 50
+
+Terminator is performing a look...
+Terminator set pos to 18, 3
+
+TerminatorRoboCop has shot {17, 0} 
+TerminatorRoboCop has shot {1, 1} 
+TerminatorRoboCop has shot {3, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 8, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {18, 3}
+Terminator is at {8, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 51
+
+Terminator is performing a look...
+Terminator set pos to 19, 3
+
+TerminatorRoboCop has shot {3, 0} 
+TerminatorRoboCop has shot {13, 4} 
+TerminatorRoboCop has shot {6, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 8, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {19, 3}
+Terminator is at {8, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 52
+
+Terminator is performing a look...
+Terminator set pos to 19, 2
+
+TerminatorRoboCop has shot {14, 4} 
+TerminatorRoboCop has shot {11, 1} 
+TerminatorRoboCop has shot {1, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 8, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {19, 2}
+Terminator is at {8, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 53
+
+Terminator is performing a look...
+Terminator set pos to 20, 2
+
+TerminatorRoboCop has shot {6, 4} 
+TerminatorRoboCop has shot {9, 3} 
+TerminatorRoboCop has shot {13, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 7, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {20, 2}
+Terminator is at {7, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 54
+
+Terminator is performing a look...
+Terminator set pos to 20, 3
+
+TerminatorRoboCop has shot {13, 0} 
+TerminatorRoboCop has shot {12, 0} 
+TerminatorRoboCop has shot {15, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 8, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {20, 3}
+Terminator is at {8, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 55
+
+Terminator is performing a look...
+Terminator set pos to 21, 4
+
+TerminatorRoboCop has shot {3, 0} 
+TerminatorRoboCop has shot {0, 0} 
+TerminatorRoboCop has shot {13, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 7, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {21, 4}
+Terminator is at {7, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 56
+
+Terminator is performing a look...
+Terminator set pos to 21, 3
+
+TerminatorRoboCop has shot {11, 3} 
+TerminatorRoboCop has shot {14, 2} 
+TerminatorRoboCop has shot {1, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 8, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {21, 3}
+Terminator is at {8, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 57
+
+Terminator is performing a look...
+Terminator set pos to 21, 2
+
+TerminatorRoboCop has shot {12, 4} 
+TerminatorRoboCop has shot {0, 4} 
+TerminatorRoboCop has shot {9, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 7, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {21, 2}
+Terminator is at {7, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 58
+
+Terminator is performing a look...
+Terminator set pos to 20, 2
+
+TerminatorRoboCop has shot {15, 3} 
+TerminatorRoboCop has shot {5, 0} 
+TerminatorRoboCop has shot {5, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 8, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {20, 2}
+Terminator is at {8, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 59
+
+Terminator is performing a look...
+Terminator set pos to 20, 1
+
+TerminatorRoboCop has shot {12, 0} 
+TerminatorRoboCop has shot {5, 4} 
+TerminatorRoboCop has shot {6, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 7, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {20, 1}
+Terminator is at {7, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 60
+
+Terminator is performing a look...
+Terminator set pos to 21, 2
+
+TerminatorRoboCop has shot {9, 1} 
+TerminatorRoboCop has shot {14, 0} 
+TerminatorRoboCop has shot {11, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 8, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {21, 2}
+Terminator is at {8, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 61
+
+Terminator is performing a look...
+Terminator set pos to 20, 1
+
+TerminatorRoboCop has shot {12, 0} 
+TerminatorRoboCop has shot {8, 2} 
+TerminatorRoboCop has shot {1, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 9, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {20, 1}
+Terminator is at {9, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 62
+
+Terminator is performing a look...
+Terminator set pos to 20, 2
+
+TerminatorRoboCop has shot {7, 0} 
+TerminatorRoboCop has shot {15, 4} 
+TerminatorRoboCop has shot {15, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 9, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {20, 2}
+Terminator is at {9, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 63
+
+Terminator is performing a look...
+Terminator set pos to 21, 1
+
+TerminatorRoboCop has shot {11, 2} 
+TerminatorRoboCop has shot {10, 4} 
+TerminatorRoboCop has shot {12, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 10, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {21, 1}
+Terminator is at {10, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 64
+
+Terminator is performing a look...
+Terminator set pos to 20, 0
+
+TerminatorRoboCop has shot {12, 1} 
+TerminatorRoboCop has shot {18, 4} 
+TerminatorRoboCop has shot {16, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 11, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {20, 0}
+Terminator is at {11, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 65
+
+Terminator is performing a look...
+Terminator set pos to 19, 1
+
+TerminatorRoboCop has shot {19, 2} 
+TerminatorRoboCop has shot {12, 1} 
+TerminatorRoboCop has shot {5, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 12, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {19, 1}
+Terminator is at {12, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 66
+
+Terminator is performing a look...
+Terminator set pos to 20, 1
+
+TerminatorRoboCop has shot {8, 3} 
+TerminatorRoboCop has shot {11, 2} 
+TerminatorRoboCop has shot {13, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 13, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {20, 1}
+Terminator is at {13, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 67
+
+Terminator is performing a look...
+Terminator set pos to 21, 2
+
+TerminatorRoboCop has shot {18, 1} 
+TerminatorRoboCop has shot {19, 1} 
+TerminatorRoboCop has shot {6, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 14, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {21, 2}
+Terminator is at {14, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 68
+
+Terminator is performing a look...
+Terminator set pos to 20, 1
+
+TerminatorRoboCop has shot {7, 1} 
+TerminatorRoboCop has shot {11, 3} 
+TerminatorRoboCop has shot {14, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 13, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {20, 1}
+Terminator is at {13, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 69
+
+Terminator is performing a look...
+Terminator set pos to 20, 2
+
+TerminatorRoboCop has shot {11, 1} 
+TerminatorRoboCop has shot {19, 0} 
+TerminatorRoboCop has shot {6, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 12, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {20, 2}
+Terminator is at {12, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 70
+
+Terminator is performing a look...
+Terminator set pos to 21, 2
+
+TerminatorRoboCop has shot {7, 1} 
+TerminatorRoboCop has shot {17, 3} 
+TerminatorRoboCop has shot {15, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 12, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {21, 2}
+Terminator is at {12, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 71
+
+Terminator is performing a look...
+Terminator set pos to 20, 2
+
+TerminatorRoboCop has shot {17, 0} 
+TerminatorRoboCop has shot {6, 2} 
+TerminatorRoboCop has shot {16, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 11, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {20, 2}
+Terminator is at {11, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 72
+
+Terminator is performing a look...
+Terminator set pos to 21, 2
+
+TerminatorRoboCop has shot {13, 0} 
+TerminatorRoboCop has shot {14, 4} 
+TerminatorRoboCop has shot {7, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 11, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {21, 2}
+Terminator is at {11, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 73
+
+Terminator is performing a look...
+Terminator set pos to 21, 1
+
+TerminatorRoboCop has shot {7, 0} 
+TerminatorRoboCop has shot {7, 2} 
+TerminatorRoboCop has shot {10, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 10, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {21, 1}
+Terminator is at {10, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 74
+
+Terminator is performing a look...
+Terminator set pos to 20, 2
+
+TerminatorRoboCop has shot {4, 3} 
+TerminatorRoboCop has shot {16, 4} 
+TerminatorRoboCop has shot {12, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 9, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {20, 2}
+Terminator is at {9, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 75
+
+Terminator is performing a look...
+Terminator set pos to 21, 3
+
+TerminatorRoboCop has shot {12, 4} 
+TerminatorRoboCop has shot {16, 0} 
+TerminatorRoboCop has shot {7, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 10, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   | T |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {21, 3}
+Terminator is at {10, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 76
+
+Terminator is performing a look...
+Terminator set pos to 20, 4
+
+TerminatorRoboCop has shot {10, 0} 
+TerminatorRoboCop has shot {6, 1} 
+TerminatorRoboCop has shot {2, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 11, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {20, 4}
+Terminator is at {11, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 77
+
+Terminator is performing a look...
+Terminator set pos to 20, 3
+
+TerminatorRoboCop has shot {10, 4} 
+TerminatorRoboCop has shot {7, 1} 
+TerminatorRoboCop has shot {9, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 10, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {20, 3}
+Terminator is at {10, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 78
+
+Terminator is performing a look...
+Terminator set pos to 21, 3
+
+TerminatorRoboCop has shot {7, 4} 
+TerminatorRoboCop has shot {3, 3} 
+TerminatorRoboCop has shot {3, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 9, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {21, 3}
+Terminator is at {9, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 79
+
+Terminator is performing a look...
+Terminator set pos to 21, 4
+
+TerminatorRoboCop has shot {6, 3} 
+TerminatorRoboCop has shot {6, 0} 
+TerminatorRoboCop has shot {3, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 8, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   | T |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {21, 4}
+Terminator is at {8, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 80
+
+Terminator is performing a look...
+Terminator set pos to 21, 3
+
+TerminatorRoboCop has shot {0, 1} 
+TerminatorRoboCop has shot {11, 2} 
+TerminatorRoboCop has shot {15, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 7, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {21, 3}
+Terminator is at {7, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 81
+
+Terminator is performing a look...
+Terminator set pos to 21, 4
+
+TerminatorRoboCop has shot {11, 0} 
+TerminatorRoboCop has shot {7, 1} 
+TerminatorRoboCop has shot {8, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 6, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {21, 4}
+Terminator is at {6, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 82
+
+Terminator is performing a look...
+Terminator set pos to 20, 4
+
+TerminatorRoboCop has shot {13, 3} 
+TerminatorRoboCop has shot {3, 2} 
+TerminatorRoboCop has shot {1, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 5, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {20, 4}
+Terminator is at {5, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 83
+
+Terminator is performing a look...
+Terminator set pos to 19, 3
+
+TerminatorRoboCop has shot {11, 4} 
+TerminatorRoboCop has shot {2, 2} 
+TerminatorRoboCop has shot {11, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 4, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {19, 3}
+Terminator is at {4, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 84
+
+Terminator is performing a look...
+Terminator set pos to 19, 2
+
+TerminatorRoboCop has shot {4, 2} 
+TerminatorRoboCop has shot {12, 2} 
+TerminatorRoboCop has shot {7, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 5, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {19, 2}
+Terminator is at {5, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 85
+
+Terminator is performing a look...
+Terminator set pos to 18, 3
+
+TerminatorRoboCop has shot {0, 3} 
+TerminatorRoboCop has shot {3, 2} 
+TerminatorRoboCop has shot {8, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 4, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {18, 3}
+Terminator is at {4, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 86
+
+Terminator is performing a look...
+Terminator set pos to 19, 3
+
+TerminatorRoboCop has shot {4, 0} 
+TerminatorRoboCop has shot {5, 0} 
+TerminatorRoboCop has shot {0, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 5, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {19, 3}
+Terminator is at {5, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 87
+
+Terminator is performing a look...
+Terminator set pos to 19, 4
+
+TerminatorRoboCop has shot {12, 4} 
+TerminatorRoboCop has shot {6, 1} 
+TerminatorRoboCop has shot {13, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 6, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {19, 4}
+Terminator is at {6, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 88
+
+Terminator is performing a look...
+Terminator set pos to 18, 4
+
+TerminatorRoboCop has shot {13, 1} 
+TerminatorRoboCop has shot {3, 1} 
+TerminatorRoboCop has shot {12, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 6, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {18, 4}
+Terminator is at {6, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 89
+
+Terminator is performing a look...
+Terminator set pos to 17, 4
+
+TerminatorRoboCop has shot {1, 4} 
+TerminatorRoboCop has shot {0, 2} 
+TerminatorRoboCop has shot {0, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 5, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {17, 4}
+Terminator is at {5, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 90
+
+Terminator is performing a look...
+Terminator set pos to 17, 3
+
+TerminatorRoboCop has shot {10, 3} 
+TerminatorRoboCop has shot {11, 4} 
+TerminatorRoboCop has shot {2, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 4, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {17, 3}
+Terminator is at {4, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 91
+
+Terminator is performing a look...
+Terminator set pos to 16, 3
+
+TerminatorRoboCop has shot {12, 1} 
+TerminatorRoboCop has shot {7, 2} 
+TerminatorRoboCop has shot {3, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 5, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {16, 3}
+Terminator is at {5, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 92
+
+Terminator is performing a look...
+Terminator set pos to 15, 3
+
+TerminatorRoboCop has shot {10, 3} 
+TerminatorRoboCop has shot {12, 4} 
+TerminatorRoboCop has shot {5, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 4, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {15, 3}
+Terminator is at {4, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 93
+
+Terminator is performing a look...
+Terminator set pos to 15, 4
+
+TerminatorRoboCop has shot {13, 0} 
+TerminatorRoboCop has shot {1, 4} 
+TerminatorRoboCop has shot {12, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 3, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {15, 4}
+Terminator is at {3, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 94
+
+Terminator is performing a look...
+Terminator set pos to 16, 4
+
+TerminatorRoboCop has shot {0, 4} 
+TerminatorRoboCop has shot {2, 3} 
+TerminatorRoboCop has shot {7, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 2, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {16, 4}
+Terminator is at {2, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 95
+
+Terminator is performing a look...
+Terminator set pos to 16, 3
+
+TerminatorRoboCop has shot {0, 2} 
+TerminatorRoboCop has shot {7, 3} 
+TerminatorRoboCop has shot {2, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 3, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {16, 3}
+Terminator is at {3, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 96
+
+Terminator is performing a look...
+Terminator set pos to 15, 4
+
+TerminatorRoboCop has shot {2, 0} 
+TerminatorRoboCop has shot {3, 0} 
+TerminatorRoboCop has shot {7, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 2, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {15, 4}
+Terminator is at {2, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 97
+
+Terminator is performing a look...
+Terminator set pos to 14, 3
+
+TerminatorRoboCop has shot {4, 0} 
+TerminatorRoboCop has shot {0, 3} 
+TerminatorRoboCop has shot {4, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 1, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   | A |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {14, 3}
+Terminator is at {1, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 98
+
+Terminator is performing a look...
+Terminator set pos to 13, 4
+
+TerminatorRoboCop has shot {9, 4} 
+TerminatorRoboCop has shot {8, 4} 
+TerminatorRoboCop has shot {2, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 1, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   | A |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {13, 4}
+Terminator is at {1, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 99
+
+Terminator is performing a look...
+Terminator set pos to 14, 4
+
+TerminatorRoboCop has shot {9, 2} 
+TerminatorRoboCop has shot {8, 1} 
+TerminatorRoboCop has shot {5, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 0, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {14, 4}
+Terminator is at {0, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 100
+
+Terminator is performing a look...
+Terminator set pos to 13, 4
+
+TerminatorRoboCop has shot {3, 3} 
+TerminatorRoboCop has shot {2, 4} 
+TerminatorRoboCop has shot {6, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 1, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {13, 4}
+Terminator is at {1, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 101
+
+Terminator is performing a look...
+Terminator set pos to 12, 3
+
+TerminatorRoboCop has shot {7, 1} 
+TerminatorRoboCop has shot {2, 1} 
+TerminatorRoboCop has shot {6, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 0, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {12, 3}
+Terminator is at {0, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 102
+
+Terminator is performing a look...
+Terminator set pos to 11, 4
+
+TerminatorRoboCop has shot {6, 3} 
+TerminatorRoboCop has shot {2, 2} 
+TerminatorRoboCop has shot {8, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 1, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {11, 4}
+Terminator is at {1, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 103
+
+Terminator is performing a look...
+Terminator set pos to 10, 4
+
+TerminatorRoboCop has shot {4, 2} 
+TerminatorRoboCop has shot {4, 4} 
+TerminatorRoboCop has shot {8, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 1, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   | A |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {10, 4}
+Terminator is at {1, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 104
+
+Terminator is performing a look...
+Terminator set pos to 11, 4
+
+TerminatorRoboCop has shot {4, 2} 
+TerminatorRoboCop has shot {9, 2} 
+TerminatorRoboCop has shot {0, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 0, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {11, 4}
+Terminator is at {0, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 105
+
+Terminator is performing a look...
+Terminator set pos to 11, 3
+
+TerminatorRoboCop has shot {2, 4} 
+TerminatorRoboCop has shot {4, 1} 
+TerminatorRoboCop has shot {3, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 1, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {11, 3}
+Terminator is at {1, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 106
+
+Terminator is performing a look...
+Terminator set pos to 11, 4
+
+TerminatorRoboCop has shot {7, 3} 
+TerminatorRoboCop has shot {5, 4} 
+TerminatorRoboCop has shot {8, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 2, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {11, 4}
+Terminator is at {2, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 107
+
+Terminator is performing a look...
+Terminator set pos to 10, 3
+
+TerminatorRoboCop has shot {4, 3} 
+TerminatorRoboCop has shot {9, 0} 
+TerminatorRoboCop has shot {3, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 2, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {10, 3}
+Terminator is at {2, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 108
+
+Terminator is performing a look...
+Terminator set pos to 11, 2
+
+TerminatorRoboCop has shot {1, 4} 
+TerminatorRoboCop has shot {8, 3} 
+TerminatorRoboCop has shot {5, 3} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 1, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {11, 2}
+Terminator is at {1, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 109
+
+Terminator is performing a look...
+Terminator set pos to 12, 1
+
+TerminatorRoboCop has shot {9, 1} 
+TerminatorRoboCop has shot {7, 3} 
+TerminatorRoboCop has shot {4, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 2, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {12, 1}
+Terminator is at {2, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 110
+
+Terminator is performing a look...
+Terminator set pos to 12, 2
+
+TerminatorRoboCop has shot {5, 2} 
+TerminatorRoboCop has shot {9, 1} 
+TerminatorRoboCop has shot {1, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 1, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   | A |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {12, 2}
+Terminator is at {1, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 111
+
+Terminator is performing a look...
+Terminator set pos to 13, 3
+
+TerminatorRoboCop has shot {4, 0} 
+TerminatorRoboCop has shot {9, 1} 
+TerminatorRoboCop has shot {3, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 0, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| A |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {13, 3}
+Terminator is at {0, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 112
+
+Terminator is performing a look...
+Terminator set pos to 13, 4
+
+TerminatorRoboCop has shot {7, 0} 
+TerminatorRoboCop has shot {6, 4} 
+TerminatorRoboCop has shot {5, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 1, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {13, 4}
+Terminator is at {1, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 113
+
+Terminator is performing a look...
+Terminator set pos to 12, 4
+
+TerminatorRoboCop has shot {3, 0} 
+TerminatorRoboCop has shot {1, 1} 
+TerminatorRoboCop has shot {3, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 1, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {12, 4}
+Terminator is at {1, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 114
+
+Terminator is performing a look...
+Terminator set pos to 11, 4
+
+TerminatorRoboCop has shot {1, 1} 
+TerminatorRoboCop has shot {5, 3} 
+TerminatorRoboCop has shot {3, 0} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 1, 4
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   | A |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {11, 4}
+Terminator is at {1, 4}
+
+
+--------------------------------------------------------------------------------------------
+Turn 115
+
+Terminator is performing a look...
+Terminator set pos to 12, 3
+
+TerminatorRoboCop has shot {5, 2} 
+TerminatorRoboCop has shot {7, 1} 
+TerminatorRoboCop has shot {7, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 2, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   | A |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {12, 3}
+Terminator is at {2, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 116
+
+Terminator is performing a look...
+Terminator set pos to 12, 2
+
+TerminatorRoboCop has shot {4, 0} 
+TerminatorRoboCop has shot {2, 2} 
+TerminatorRoboCop has shot {4, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 3, 3
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {12, 2}
+Terminator is at {3, 3}
+
+
+--------------------------------------------------------------------------------------------
+Turn 117
+
+Terminator is performing a look...
+Terminator set pos to 11, 3
+
+TerminatorRoboCop has shot {10, 1} 
+TerminatorRoboCop has shot {0, 3} 
+TerminatorRoboCop has shot {5, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 3, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {11, 3}
+Terminator is at {3, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 118
+
+Terminator is performing a look...
+Terminator set pos to 11, 2
+
+TerminatorRoboCop has shot {9, 0} 
+TerminatorRoboCop has shot {8, 4} 
+TerminatorRoboCop has shot {7, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 4, 2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   | A |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {11, 2}
+Terminator is at {4, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 119
+
+Terminator is performing a look...
+Terminator set pos to 12, 3
+
+TerminatorRoboCop has shot {12, 4} 
+TerminatorRoboCop has shot {12, 2} 
+TerminatorRoboCop has shot {6, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 5, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {12, 3}
+Terminator is at {5, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 120
+
+Terminator is performing a look...
+Terminator set pos to 11, 3
+
+TerminatorRoboCop has shot {0, 1} 
+TerminatorRoboCop has shot {12, 3} 
+TerminatorRoboCop has shot {11, 2} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 5, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {11, 3}
+Terminator is at {5, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 121
+
+Terminator is performing a look...
+Terminator set pos to 10, 2
+
+TerminatorRoboCop has shot {11, 3} 
+TerminatorRoboCop has shot {4, 1} 
+TerminatorRoboCop has shot {0, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 6, 0
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {10, 2}
+Terminator is at {6, 0}
+
+
+--------------------------------------------------------------------------------------------
+Turn 122
+
+Terminator is performing a look...
+Terminator set pos to 9, 2
+
+TerminatorRoboCop has shot {10, 3} 
+TerminatorRoboCop has shot {12, 0} 
+TerminatorRoboCop has shot {3, 1} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop set pos to 7, 1
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   | T |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {9, 2}
+Terminator is at {7, 1}
+
+
+--------------------------------------------------------------------------------------------
+Turn 123
+
+Terminator is performing a look...
+Terminator set pos to 8, 2
+
+TerminatorRoboCop has shot {10, 3} 
+TerminatorRoboCop has shot {1, 1} 
+TerminatorRoboCop has shot {10, 4} 
+TerminatorRoboCop is performing a look...
+TerminatorRoboCop is at 7 1
+Target spotted at: 8,2
+TerminatorRoboCop has terminated robot at 8,2
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | A |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Terminator is at {8, 2}
+
+
+--------------------------------------------------------------------------------------------
+Turn 124
+
+GAME ENDED! THE WINNER IS Terminator!

@@ -1,3 +1,38 @@
+/* *********************************************************************
+PROGRAM : battlefield.h
+COURSE: OOPDS
+TRIMESTER: 2410
+LECTURE SESSION: TC1L
+TUTORIAL SESSION: TT2L
+GROUP: 3
+
+Member 1
+Name: Chee Rui
+ID: 1211112287
+
+Member 2
+Name: Andrew Wee Hong Jun
+ID: 1211108270
+
+Member 3
+Name: Mei Yong Peng
+ID: 1211109159
+
+Member 4
+Name: Low Junn Kit
+ID: 1211111305
+
+Member 5
+Name: Fong Kai Chun
+ID: 1211108430
+
+Member 6
+Name: Chan Ka Ken 
+ID: 1211109440
+
+********************************************************************* */
+
+
 #ifndef BATTLEFIELD_H
 #define BATTLEFIELD_H
 
@@ -132,6 +167,7 @@ public:
 		this->elem_list_size = elem_list_size;
 			
 		coordinates = new int*[elem_list_size];
+		
 		for (int i = 0; i < elem_list_size; ++i) {
 			coordinates[i] = new int[2];
 		}
